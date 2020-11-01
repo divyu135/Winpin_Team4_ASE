@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import Lobby from './Lobby';
+import Room from './Room';
 
 const VideoChat = () => {
   const [username, setUsername] = useState('');
