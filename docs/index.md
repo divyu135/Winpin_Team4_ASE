@@ -21,7 +21,7 @@ For more details go to [Inception Report](./Inception%20Report.pdf)
 
 #### Virtual Room:
 ![Virtual Room on Desktop](./images/web1.png "Virtual Room on Desktop") 
-![Virtual Room on Mobile](./images/mobile1.png "Virtual Room on Mobile")
+<!--![Virtual Room on Mobile](./images/mobile1.png "Virtual Room on Mobile") -->
 
 ## Task List
 ![Task Reports](./images/Task%20Report.svg "Task Report")
