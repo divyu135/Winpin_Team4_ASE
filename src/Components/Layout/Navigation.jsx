@@ -60,8 +60,11 @@ class DesktopContainer extends Component {
                       Home
                     </Menu.Item>
                   </Link>
+                  <Menu.Item className='navBtn'>Events</Menu.Item>
+                  <Menu.Item className='navBtn'>Organization</Menu.Item>
+                  <Menu.Item className='navBtn'>Create</Menu.Item>
                   <Link to='/video'>
-                    <Menu.Item className='navBtn'>Video</Menu.Item>
+                    <Menu.Item className='navBtn'>Virtual Room</Menu.Item>
                   </Link>
                 </Menu.Item>
               </Container>
@@ -101,17 +104,27 @@ class MobileContainer extends Component {
             vertical
             visible={sidebarOpened}
           >
-            <Menu.Item as='a' active>
-              Home
-            </Menu.Item>
-            <Menu.Item as='a'>Video</Menu.Item>
+            <Link to='/home'>
+              <Menu.Item active>Home</Menu.Item>
+            </Link>
+            <Menu.Item>Events</Menu.Item>
+            <Menu.Item>Organization</Menu.Item>
+            <Menu.Item>Create</Menu.Item>
+
+            <Link to='/video'>
+              <Menu.Item>Virtual Room</Menu.Item>
+            </Link>
           </Sidebar>
 
-          <Sidebar.Pusher dimmed={sidebarOpened}>
+          {/* <Sidebar.Pusher dimmed={sidebarOpened}> */}
+          <Sidebar.Pusher dimmed={sidebarOpened} style={{ minHeight: "100vh" }}>
             <Segment textAlign='center' style={{ padding: "1em 0em" }} vertical>
               <Container>
                 <Menu pointing secondary size='large'>
-                  <Menu.Item onClick={this.handleToggle}>
+                  <Menu.Item
+                    onClick={this.handleToggle}
+                    className='sidebarIcon'
+                  >
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <span position='left'>
@@ -125,16 +138,6 @@ class MobileContainer extends Component {
                   <span position='right'>
                     <h1 className='ProjNameMobile'>Winpin</h1>
                   </span>
-                  <Menu.Item position='right' className='marginborders'>
-                    <Link to='/home'>
-                      <Menu.Item className='navBtnMobile' active>
-                        Home
-                      </Menu.Item>
-                    </Link>
-                    <Link to='/video'>
-                      <Menu.Item className='navBtnMobile'>Video</Menu.Item>
-                    </Link>
-                  </Menu.Item>
                 </Menu>
               </Container>
             </Segment>
