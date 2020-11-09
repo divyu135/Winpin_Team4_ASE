@@ -1,0 +1,152 @@
+.mainlogo {
+<<<<<<< HEAD
+  width: 80px !important;
+  height: auto;
+  font-size: 1rem;
+  /* margin-left: -140px; */
+  margin-top: 10px;
+  margin-bottom: 20px;
+=======
+  width: 50px !important;
+  height: auto;
+  font-size: 1rem;
+  /* margin-left: -140px; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+>>>>>>> MainLayout
+}
+.mainlogoMobile {
+  width: 40px !important;
+  height: auto;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.ProjName {
+<<<<<<< HEAD
+  font-size: 36px;
+  font-weight: 700;
+  color: #58585b;
+  font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif;
+  padding-top: 34px;
+=======
+  font-size: 30px;
+  font-weight: 700;
+  color: #58585b;
+  font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif;
+  padding-top: 16px;
+>>>>>>> MainLayout
+}
+.ProjNameMobile {
+  font-size: 26px;
+  font-weight: 700;
+  color: #58585b;
+  font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif;
+  padding-top: 14px;
+}
+.ui.menu .item:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0px !important;
+  background: rgba(34, 36, 38, 0.1);
+}
+
+.marginborders {
+  border-left: transparent !important;
+}
+
+.navBtn {
+  background-color: #005595 !important;
+  color: #ffffff !important;
+<<<<<<< HEAD
+  padding: 0 1.5rem !important;
+  margin: 0 0 0 1rem !important;
+  line-height: 3rem !important;
+  cursor: pointer !important;
+  font-size: 1.25rem !important;
+=======
+  padding: 0px 1.5rem !important;
+  margin: 0 0 0 1rem !important;
+  line-height: 3rem !important;
+  cursor: pointer !important;
+  font-size: 1.2rem !important;
+>>>>>>> MainLayout
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+.navBtn:hover {
+  background: #ffce00 !important;
+  color: #58585b !important;
+}
+
+<<<<<<< HEAD
+.navBtnMobile {
+  background-color: #005595 !important;
+  color: #ffffff !important;
+  padding: 0px 0.5rem !important;
+  margin: 0 0 0 1rem !important;
+  line-height: 2rem !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+}
+.navBtnMobile:hover {
+  background: #ffce00 !important;
+  color: #58585b !important;
+=======
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.sidebarIcon {
+  margin-bottom: 10px !important;
+  border-bottom-color: transparent !important;
+}
+
+.FooterLogo {
+  width: 187px !important;
+}
+.footer {
+  box-shadow: 0px 0 0 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.footerContent {
+  font-weight: bold !important;
+  color: #ffffff !important;
+  letter-spacing: 0.1em !important;
+  font-size: 12px !important;
+  font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif !important;
+  line-height: 2.428571 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+.footerContent:hover {
+  color: #ffce00 !important;
+}
+
+.center-block {
+  display: block !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerStyle {
+  background-color: #58585b !important;
+  color: #ffffff;
+>>>>>>> MainLayout
+}
