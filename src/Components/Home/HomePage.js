@@ -54,7 +54,7 @@ class HomePage extends Component {
             </div>
           </Slide>
         </Segment>
-        <Segment>
+        {/* <Segment>
           <div class='ui three column grid'>
             <div class='column'>
               <div class='ui segment'>
@@ -72,7 +72,7 @@ class HomePage extends Component {
               </div>
             </div>
           </div>
-        </Segment>
+        </Segment> */}
         <Footer></Footer>
       </div>
     );
