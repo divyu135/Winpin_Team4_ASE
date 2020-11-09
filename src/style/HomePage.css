@@ -1,19 +1,10 @@
 .mainlogo {
-<<<<<<< HEAD
-  width: 80px !important;
-  height: auto;
-  font-size: 1rem;
-  /* margin-left: -140px; */
-  margin-top: 10px;
-  margin-bottom: 20px;
-=======
   width: 50px !important;
   height: auto;
   font-size: 1rem;
   /* margin-left: -140px; */
   margin-top: 5px;
   margin-bottom: 5px;
->>>>>>> MainLayout
 }
 .mainlogoMobile {
   width: 40px !important;
@@ -23,19 +14,11 @@
   margin-bottom: 10px;
 }
 .ProjName {
-<<<<<<< HEAD
-  font-size: 36px;
-  font-weight: 700;
-  color: #58585b;
-  font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif;
-  padding-top: 34px;
-=======
   font-size: 30px;
   font-weight: 700;
   color: #58585b;
   font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif;
   padding-top: 16px;
->>>>>>> MainLayout
 }
 .ProjNameMobile {
   font-size: 26px;
@@ -61,19 +44,11 @@
 .navBtn {
   background-color: #005595 !important;
   color: #ffffff !important;
-<<<<<<< HEAD
-  padding: 0 1.5rem !important;
-  margin: 0 0 0 1rem !important;
-  line-height: 3rem !important;
-  cursor: pointer !important;
-  font-size: 1.25rem !important;
-=======
   padding: 0px 1.5rem !important;
   margin: 0 0 0 1rem !important;
   line-height: 3rem !important;
   cursor: pointer !important;
   font-size: 1.2rem !important;
->>>>>>> MainLayout
   text-transform: uppercase !important;
   font-weight: 700 !important;
 }
@@ -82,22 +57,6 @@
   color: #58585b !important;
 }
 
-<<<<<<< HEAD
-.navBtnMobile {
-  background-color: #005595 !important;
-  color: #ffffff !important;
-  padding: 0px 0.5rem !important;
-  margin: 0 0 0 1rem !important;
-  line-height: 2rem !important;
-  cursor: pointer !important;
-  font-size: 1rem !important;
-  text-transform: uppercase !important;
-  font-weight: 400 !important;
-}
-.navBtnMobile:hover {
-  background: #ffce00 !important;
-  color: #58585b !important;
-=======
 .each-slide > div {
   display: flex;
   align-items: center;
@@ -148,5 +107,4 @@
 .footerStyle {
   background-color: #58585b !important;
   color: #ffffff;
->>>>>>> MainLayout
 }
