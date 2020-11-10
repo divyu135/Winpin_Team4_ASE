@@ -1,6 +1,3 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable react/no-multi-comp */
-
 import HomePage from "./Home/HomePage";
 import Video from "./Video/video";
 import Navigation from "./Layout/Navigation";
