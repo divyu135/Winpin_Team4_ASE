@@ -4,6 +4,7 @@
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Button,
   Container,
@@ -54,7 +55,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
+    <Button primary size='huge' as={ Link } name='video-app' to='/video-app' >
       Get Started
       <Icon name='right arrow' />
     </Button>
@@ -100,18 +101,20 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item as={ Link } name='home' to='/' active >
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
+                <Menu.Item as='a'>Events</Menu.Item>
+                <Menu.Item as='a'>About</Menu.Item>
+                <Menu.Item as={ Link } name='home' to='/' active >
+                  Home
+                </Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
+                  {/* <Button as='a' inverted={!fixed}>
                     Log in
-                  </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
+                  </Button> */}
+                  <Button as={ Link } name='video-app' to='/video-app' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                     Winpin App 
                   </Button>
                 </Menu.Item>
               </Container>

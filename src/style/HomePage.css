@@ -1,0 +1,74 @@
+.mainlogo {
+    width: 80px !important;
+    height: auto;
+    font-size: 1rem;
+    /* margin-left: -140px; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .mainlogoMobile {
+    width: 40px !important;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .ProjName {
+    font-size: 36px;
+    font-weight: 700;
+    color: #58585b;
+    font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif;
+    padding-top: 34px;
+  }
+  .ProjNameMobile {
+    font-size: 26px;
+    font-weight: 700;
+    color: #58585b;
+    font-family: Tahoma, "DejaVu Sans Condensed", Geneva, Helvetica, sans-serif;
+    padding-top: 14px;
+  }
+  .ui.menu .item:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0px !important;
+    background: rgba(34, 36, 38, 0.1);
+  }
+  
+  .marginborders {
+    border-left: transparent !important;
+  }
+  
+  .navBtn {
+    background-color: #005595 !important;
+    color: #ffffff !important;
+    padding: 0 1.5rem !important;
+    margin: 0 0 0 1rem !important;
+    line-height: 3rem !important;
+    cursor: pointer !important;
+    font-size: 1.25rem !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+  }
+  .navBtn:hover {
+    background: #ffce00 !important;
+    color: #58585b !important;
+  }
+  
+  .navBtnMobile {
+    background-color: #005595 !important;
+    color: #ffffff !important;
+    padding: 0px 0.5rem !important;
+    margin: 0 0 0 1rem !important;
+    line-height: 2rem !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+  }
+  .navBtnMobile:hover {
+    background: #ffce00 !important;
+    color: #58585b !important;
+  }
