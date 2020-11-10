@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 import { CssBaseline } from '@material-ui/core';
 import { MuiThemeProvider } from '@material-ui/core/styles';
@@ -15,6 +15,8 @@ import './types';
 import { VideoProvider } from './components/VideoProvider';
 import useConnectionOptions from './utils/useConnectionOptions/useConnectionOptions';
 import UnsupportedBrowserWarning from './components/UnsupportedBrowserWarning/UnsupportedBrowserWarning';
+
+import PasscodeEntry from './PasscodeEntry';
 
 const VideoApp = () => {
   const { error, setError } = useAppState();
@@ -38,6 +40,9 @@ export default function ConferenceRoom() {
       <AppStateProvider>
         <Switch>
           <PrivateRoute exact path="/">
+            <PasscodeEntry />
+          </PrivateRoute>
+          <PrivateRoute exact path="/video-app">
             <VideoApp />
           </PrivateRoute>
           <PrivateRoute path="/room/:URLRoomName">

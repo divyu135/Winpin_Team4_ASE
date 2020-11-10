@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import {
-  Button,
   Container,
   Icon,
   Image,
@@ -31,7 +30,7 @@ class DesktopContainer extends Component {
 
   render() {
     const { children } = this.props;
-    const { fixed } = this.state;
+    // const { fixed } = this.state;
 
     return (
       <Media greaterThan='mobile'>
@@ -63,7 +62,10 @@ class DesktopContainer extends Component {
                   <Menu.Item className='navBtn'>Events</Menu.Item>
                   <Menu.Item className='navBtn'>Organization</Menu.Item>
                   <Menu.Item className='navBtn'>Create</Menu.Item>
-                  <Link to='/video'>
+                  {/* <Link to='/video'>
+                    <Menu.Item className='navBtn'>Virtual Room</Menu.Item>
+                  </Link> */}
+                  <Link to='/app'>
                     <Menu.Item className='navBtn'>Virtual Room</Menu.Item>
                   </Link>
                 </Menu.Item>
@@ -111,7 +113,7 @@ class MobileContainer extends Component {
             <Menu.Item>Organization</Menu.Item>
             <Menu.Item>Create</Menu.Item>
 
-            <Link to='/video'>
+            <Link to='/app'>
               <Menu.Item>Virtual Room</Menu.Item>
             </Link>
           </Sidebar>

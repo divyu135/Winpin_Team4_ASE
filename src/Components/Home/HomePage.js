@@ -2,34 +2,30 @@
 /* eslint-disable react/no-multi-comp */
 
 import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Sidebar,
-  Visibility,
-} from "semantic-ui-react";
+import { Slide } from "react-slideshow-image";
 // import { Carousel } from "react-responsive-carousel";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import 'semantic-ui-css/semantic.css';
 import "react-slideshow-image/dist/styles.css";
-import { Slide } from "react-slideshow-image";
-
+import {
+  // Button,
+  // Container,
+  // Divider,
+  // Grid,
+  // Header,
+  // Icon,
+  // Image,
+  // List,
+  // Menu,
+  Segment
+} from "semantic-ui-react";
 import "../../style/HomePage.css";
-import Navigation from "../Layout/Navigation";
 import Footer from "../Layout/Footer";
-
-import event1 from "./event1.jpg";
 import event2 from "./event2.png";
 import event3 from "./event3.jpg";
 import event4 from "./event4.jpg";
+
+
 
 class HomePage extends Component {
   state = {};

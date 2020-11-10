@@ -90,6 +90,7 @@ export default function PasscodeEntry() {
 
 
   return (
+    <Fragment>
     <PassIntroContainer>
       
     <Typography variant="h5" className={classes.gutterBottom}>
@@ -131,5 +132,6 @@ export default function PasscodeEntry() {
             </Grid>
           </form>
     </PassIntroContainer>
+    </Fragment>
   );
 }

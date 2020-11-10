@@ -1,11 +1,8 @@
-import React from 'react';
 import { makeStyles, Theme, Typography } from '@material-ui/core';
+import React from 'react';
 import Swoosh from './components/IntroContainer/swoosh';
+// import UWinLogo from './components/IntroContainer/UWinLogo';
 import VideoLogo from './components/IntroContainer/VideoLogo';
-import UWinLogo from './components/IntroContainer/UWinLogo';
-// import { useAppState } from '../../state';
-import UserMenu from './components/IntroContainer/UserMenu/UserMenu';
-import { useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) => ({
   background: {
@@ -103,11 +100,11 @@ interface IntroContainerProps {
 const PassIntroContainer = (props: IntroContainerProps) => {
   const classes = useStyles();
 //   const { user } = useAppState();
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
     <div className={classes.background}>
-      <UWinLogo className={classes.uwinlogo} />
+      {/* <UWinLogo className={classes.uwinlogo} /> */}
       {/* {user && location.pathname !== '/login' && <UserMenu />} */}
       <div className={classes.container}>
         <div className={classes.innerContainer}>

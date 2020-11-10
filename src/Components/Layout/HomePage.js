@@ -9,16 +9,12 @@ import {
   Divider,
   Grid,
   Header,
-  Icon,
   Image,
   List,
-  Menu,
   Segment,
-  Sidebar,
-  Visibility,
 } from 'semantic-ui-react'
 import '../../style/HomePage.css'
-import Video from '../Video/video'
+// import Video from '../Video/video'
 
 
 const HomePage = () => (
