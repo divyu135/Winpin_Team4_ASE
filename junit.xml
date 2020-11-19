@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="423" failures="0" time="29.328">
+  <testsuite name="the ParticipantInfo component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:22" time="1.272" tests="13">
+    <testcase classname="the ParticipantInfo component should render the AvatarIcon component when no video tracks are published" name="the ParticipantInfo component should render the AvatarIcon component when no video tracks are published" time="0.078">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should not display the AvatarIcon component when a video track is published" name="the ParticipantInfo component should not display the AvatarIcon component when a video track is published" time="0.01">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should render the AvatarIcon component when the video track is switchedOff" name="the ParticipantInfo component should render the AvatarIcon component when the video track is switchedOff" time="0.01">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should not render the reconnecting UI when the user is connected" name="the ParticipantInfo component should not render the reconnecting UI when the user is connected" time="0.003">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should render the reconnecting UI when the user is reconnecting" name="the ParticipantInfo component should render the reconnecting UI when the user is reconnecting" time="0.002">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should add hideParticipant class to container component when hideParticipant prop is true" name="the ParticipantInfo component should add hideParticipant class to container component when hideParticipant prop is true" time="0.002">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should not add hideParticipant class to container component when hideParticipant prop is false" name="the ParticipantInfo component should not add hideParticipant class to container component when hideParticipant prop is false" time="0.001">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should add cursorPointer class to container component when onClick prop is present" name="the ParticipantInfo component should add cursorPointer class to container component when onClick prop is present" time="0.002">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should not add cursorPointer class to container component when onClick prop is not present" name="the ParticipantInfo component should not add cursorPointer class to container component when onClick prop is not present" time="0.001">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should render the PinIcon component when the participant is selected" name="the ParticipantInfo component should render the PinIcon component when the participant is selected" time="0.004">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should not render the PinIcon component when the participant is not selected" name="the ParticipantInfo component should not render the PinIcon component when the participant is not selected" time="0.004">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should add &quot;(You)&quot; to the participants identity when they are the localParticipant" name="the ParticipantInfo component should add &quot;(You)&quot; to the participants identity when they are the localParticipant" time="0.002">
+    </testcase>
+    <testcase classname="the ParticipantInfo component should not add &quot;(You)&quot; to the participants identity when they are the localParticipant" name="the ParticipantInfo component should not add &quot;(You)&quot; to the participants identity when they are the localParticipant" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the PreJoinScreens component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:22" time="2.24" tests="8">
+    <testcase classname="the PreJoinScreens component should update the URL to include the room name on submit" name="the PreJoinScreens component should update the URL to include the room name on submit" time="0.041">
+    </testcase>
+    <testcase classname="the PreJoinScreens component should not update the URL when the app is deployed as a Twilio function" name="the PreJoinScreens component should not update the URL when the app is deployed as a Twilio function" time="0.02">
+    </testcase>
+    <testcase classname="the PreJoinScreens component should switch to the DeviceSelection screen when a room name is submitted" name="the PreJoinScreens component should switch to the DeviceSelection screen when a room name is submitted" time="0.034">
+    </testcase>
+    <testcase classname="the PreJoinScreens component should render the PreflightTest component only while on the DeviceSelection step" name="the PreJoinScreens component should render the PreflightTest component only while on the DeviceSelection step" time="0.022">
+    </testcase>
+    <testcase classname="the PreJoinScreens component should not render the PreflightTest component when the Video.testPreflight function does not exist" name="the PreJoinScreens component should not render the PreflightTest component when the Video.testPreflight function does not exist" time="0.012">
+    </testcase>
+    <testcase classname="the PreJoinScreens component should populate the room name from the URL and switch to the DeviceSelectionScreen when the displayName is present for the user" name="the PreJoinScreens component should populate the room name from the URL and switch to the DeviceSelectionScreen when the displayName is present for the user" time="0.07">
+    </testcase>
+    <testcase classname="the PreJoinScreens component should populate the room name from the URL and stay on the RoomNameScreen when the displayName is not present for the user" name="the PreJoinScreens component should populate the room name from the URL and stay on the RoomNameScreen when the displayName is not present for the user" time="0.019">
+    </testcase>
+    <testcase classname="the PreJoinScreens component should capture errors from getAudioAndVideoTracks and pass them to the MediaErrorSnackbar component" name="the PreJoinScreens component should capture errors from getAudioAndVideoTracks and pass them to the MediaErrorSnackbar component" time="0.055">
+    </testcase>
+  </testsuite>
+  <testsuite name="the DeviceSelectionScreen component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:24" time="0.693" tests="12">
+    <testcase classname="the DeviceSelectionScreen component when connecting to a room should disable the Join Now button" name="the DeviceSelectionScreen component when connecting to a room should disable the Join Now button" time="0.008">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when connecting to a room should disable the desktop and mobile toggle video buttons" name="the DeviceSelectionScreen component when connecting to a room should disable the desktop and mobile toggle video buttons" time="0.006">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when connecting to a room should disable the desktop and mobile toggle audio buttons" name="the DeviceSelectionScreen component when connecting to a room should disable the desktop and mobile toggle audio buttons" time="0.014">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when acquiring local tracks should disable the Join Now, toggle video, and toggle audio buttons" name="the DeviceSelectionScreen component when acquiring local tracks should disable the Join Now, toggle video, and toggle audio buttons" time="0.003">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when acquiring local tracks should disable the desktop and mobile toggle video buttons" name="the DeviceSelectionScreen component when acquiring local tracks should disable the desktop and mobile toggle video buttons" time="0.005">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when acquiring local tracks should disable the desktop and mobile toggle audio buttons" name="the DeviceSelectionScreen component when acquiring local tracks should disable the desktop and mobile toggle audio buttons" time="0.006">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when fetching a token should disable the Join Now button" name="the DeviceSelectionScreen component when fetching a token should disable the Join Now button" time="0.009">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when fetching a token should disable the desktop and mobile toggle video buttons" name="the DeviceSelectionScreen component when fetching a token should disable the desktop and mobile toggle video buttons" time="0.003">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component when fetching a token should disable the desktop and mobile toggle audio buttons" name="the DeviceSelectionScreen component when fetching a token should disable the desktop and mobile toggle audio buttons" time="0.003">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component should not disable the Join Now button by default" name="the DeviceSelectionScreen component should not disable the Join Now button by default" time="0.007">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component should go back to the RoomNameScreen when the Cancel button is clicked" name="the DeviceSelectionScreen component should go back to the RoomNameScreen when the Cancel button is clicked" time="0.005">
+    </testcase>
+    <testcase classname="the DeviceSelectionScreen component should fetch a token and connect to a room when the Join Now button is clicked" name="the DeviceSelectionScreen component should fetch a token and connect to a room when the Join Now button is clicked" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the LoginPage component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:23" time="1.961" tests="8">
+    <testcase classname="the LoginPage component with auth enabled should redirect to &quot;/&quot; when there is a user " name="the LoginPage component with auth enabled should redirect to &quot;/&quot; when there is a user " time="0.092">
+    </testcase>
+    <testcase classname="the LoginPage component with auth enabled should render the login page when there is no user" name="the LoginPage component with auth enabled should render the login page when there is no user" time="0.045">
+    </testcase>
+    <testcase classname="the LoginPage component with auth enabled should redirect the user to &quot;/&quot; after signIn when there is no previous location" name="the LoginPage component with auth enabled should redirect the user to &quot;/&quot; after signIn when there is no previous location" time="0.042">
+    </testcase>
+    <testcase classname="the LoginPage component with auth enabled should redirect the user to their previous location after signIn" name="the LoginPage component with auth enabled should redirect the user to their previous location after signIn" time="0.041">
+    </testcase>
+    <testcase classname="the LoginPage component with auth enabled should not render anything when isAuthReady is false" name="the LoginPage component with auth enabled should not render anything when isAuthReady is false" time="0.006">
+    </testcase>
+    <testcase classname="the LoginPage component with passcode auth enabled should call sign in with the supplied passcode" name="the LoginPage component with passcode auth enabled should call sign in with the supplied passcode" time="0.117">
+    </testcase>
+    <testcase classname="the LoginPage component with passcode auth enabled should call render error messages when signin fails" name="the LoginPage component with passcode auth enabled should call render error messages when signin fails" time="0.138">
+    </testcase>
+    <testcase classname="the LoginPage component should redirect to &quot;/&quot; when auth is disabled" name="the LoginPage component should redirect to &quot;/&quot; when auth is disabled" time="0.014">
+    </testcase>
+  </testsuite>
+  <testsuite name="the MainParticipantInfo component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:25" time="0.286" tests="11">
+    <testcase classname="the MainParticipantInfo component should render the AvatarIcon component when no video tracks are published" name="the MainParticipantInfo component should render the AvatarIcon component when no video tracks are published" time="0.013">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should not render the AvatarIcon component when video tracks are published" name="the MainParticipantInfo component should not render the AvatarIcon component when video tracks are published" time="0.003">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should not render the AvatarIcon component when the user has disabled their video and is sharing their screen" name="the MainParticipantInfo component should not render the AvatarIcon component when the user has disabled their video and is sharing their screen" time="0.004">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should render the AvatarIcon component when video is switched off" name="the MainParticipantInfo component should render the AvatarIcon component when video is switched off" time="0.003">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should not render the reconnecting UI when the user is connected" name="the MainParticipantInfo component should not render the reconnecting UI when the user is connected" time="0.001">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should render the reconnecting UI when the user is reconnecting" name="the MainParticipantInfo component should render the reconnecting UI when the user is reconnecting" time="0.001">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should use the switchOff status of the screen share track when it is available" name="the MainParticipantInfo component should use the switchOff status of the screen share track when it is available" time="0.001">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should use the switchOff status of the camera track when the screen share track is not available" name="the MainParticipantInfo component should use the switchOff status of the camera track when the screen share track is not available" time="0.001">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should add &quot;(You)&quot; to the participants identity when they are the localParticipant" name="the MainParticipantInfo component should add &quot;(You)&quot; to the participants identity when they are the localParticipant" time="0.001">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should not add &quot;(You)&quot; to the participants identity when they are the localParticipant" name="the MainParticipantInfo component should not add &quot;(You)&quot; to the participants identity when they are the localParticipant" time="0.001">
+    </testcase>
+    <testcase classname="the MainParticipantInfo component should add &quot;- Screen&quot; to the participants identity when they are screen sharing" name="the MainParticipantInfo component should add &quot;- Screen&quot; to the participants identity when they are screen sharing" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ParticipantList component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:25" time="0.289" tests="6">
+    <testcase classname="the ParticipantList component should correctly render Participant components" name="the ParticipantList component should correctly render Participant components" time="0.011">
+    </testcase>
+    <testcase classname="the ParticipantList component should add the isSelected prop to the first remote participant when it is selected" name="the ParticipantList component should add the isSelected prop to the first remote participant when it is selected" time="0.006">
+    </testcase>
+    <testcase classname="the ParticipantList component should not render anything when there are no remote particiants" name="the ParticipantList component should not render anything when there are no remote particiants" time="0.001">
+    </testcase>
+    <testcase classname="the ParticipantList component should add the hideParticipant prop when the participant is the mainParticipant" name="the ParticipantList component should add the hideParticipant prop when the participant is the mainParticipant" time="0.005">
+    </testcase>
+    <testcase classname="the ParticipantList component should not add the hideParticipant prop when the participant is the mainParticipant and they are selected" name="the ParticipantList component should not add the hideParticipant prop when the participant is the mainParticipant and they are selected" time="0.002">
+    </testcase>
+    <testcase classname="the ParticipantList component should not add the hideParticipant prop when the participant is the mainParticipant and they are sharing their screen" name="the ParticipantList component should not add the hideParticipant prop when the participant is the mainParticipant and they are sharing their screen" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useLocalVideoToggle hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:25" time="0.29" tests="9">
+    <testcase classname="the useLocalVideoToggle hook should return true when a localVideoTrack exists" name="the useLocalVideoToggle hook should return true when a localVideoTrack exists" time="0.019">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook should return false when a localVideoTrack does not exist" name="the useLocalVideoToggle hook should return false when a localVideoTrack does not exist" time="0.002">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook toggleVideoEnabled function should call removeLocalVideoTrack when a localVideoTrack exists" name="the useLocalVideoToggle hook toggleVideoEnabled function should call removeLocalVideoTrack when a localVideoTrack exists" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook toggleVideoEnabled function should call localParticipant.unpublishTrack when a localVideoTrack and localParticipant exists" name="the useLocalVideoToggle hook toggleVideoEnabled function should call localParticipant.unpublishTrack when a localVideoTrack and localParticipant exists" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook toggleVideoEnabled function should call getLocalVideoTrack when a localVideoTrack does not exist" name="the useLocalVideoToggle hook toggleVideoEnabled function should call getLocalVideoTrack when a localVideoTrack does not exist" time="0.005">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook toggleVideoEnabled function should call mockLocalParticipant.publishTrack when a localVideoTrack does not exist and localParticipant does exist" name="the useLocalVideoToggle hook toggleVideoEnabled function should call mockLocalParticipant.publishTrack when a localVideoTrack does not exist and localParticipant does exist" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook toggleVideoEnabled function should not call mockLocalParticipant.publishTrack when isPublishing is true" name="the useLocalVideoToggle hook toggleVideoEnabled function should not call mockLocalParticipant.publishTrack when isPublishing is true" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook toggleVideoEnabled function should call onError when publishTrack throws an error" name="the useLocalVideoToggle hook toggleVideoEnabled function should call onError when publishTrack throws an error" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalVideoToggle hook toggleVideoEnabled function should call getLocalVideoTrack with the deviceId of the previously active track" name="the useLocalVideoToggle hook toggleVideoEnabled function should call getLocalVideoTrack with the deviceId of the previously active track" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useLocalTracks hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:26" time="0.306" tests="10">
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should create local audio and video tracks" name="the useLocalTracks hook the getAudioAndVideoTracks function should create local audio and video tracks" time="0.02">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should correctly create local audio and video tracks when selected device IDs are available in localStorage" name="the useLocalTracks hook the getAudioAndVideoTracks function should correctly create local audio and video tracks when selected device IDs are available in localStorage" time="0.002">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should correctly create local audio and video tracks when selected devices IDs are available in localStorage, but do not correspond to actual devices" name="the useLocalTracks hook the getAudioAndVideoTracks function should correctly create local audio and video tracks when selected devices IDs are available in localStorage, but do not correspond to actual devices" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should create a local audio track when no video devices are present" name="the useLocalTracks hook the getAudioAndVideoTracks function should create a local audio track when no video devices are present" time="0.002">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should create a local video track when no audio devices are present" name="the useLocalTracks hook the getAudioAndVideoTracks function should create a local video track when no audio devices are present" time="0.002">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should set isAcquiringLocalTracks to true while acquiring tracks" name="the useLocalTracks hook the getAudioAndVideoTracks function should set isAcquiringLocalTracks to true while acquiring tracks" time="0.002">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should ignore calls to getAudioAndVideoTracks while isAcquiringLocalTracks is true" name="the useLocalTracks hook the getAudioAndVideoTracks function should ignore calls to getAudioAndVideoTracks while isAcquiringLocalTracks is true" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should not create any tracks when no input devices are present" name="the useLocalTracks hook the getAudioAndVideoTracks function should not create any tracks when no input devices are present" time="0.001">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the getAudioAndVideoTracks function should return an error when there is an error creating a track" name="the useLocalTracks hook the getAudioAndVideoTracks function should return an error when there is an error creating a track" time="0.002">
+    </testcase>
+    <testcase classname="the useLocalTracks hook the removeLocalVideoTrack function should call videoTrack.stop() and remove the videoTrack from state" name="the useLocalTracks hook the removeLocalVideoTrack function should call videoTrack.stop() and remove the videoTrack from state" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the MediaErrorSnackBar" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:26" time="0.313" tests="14">
+    <testcase classname="the MediaErrorSnackBar should be closed by default" name="the MediaErrorSnackBar should be closed by default" time="0.001">
+    </testcase>
+    <testcase classname="the MediaErrorSnackBar should open when there is an error" name="the MediaErrorSnackBar should open when there is an error" time="0.001">
+    </testcase>
+    <testcase classname="the MediaErrorSnackBar should open when there are no audio devices" name="the MediaErrorSnackBar should open when there are no audio devices" time="0.001">
+    </testcase>
+    <testcase classname="the MediaErrorSnackBar should open when there are no video devices" name="the MediaErrorSnackBar should open when there are no video devices" time="0.001">
+    </testcase>
+    <testcase classname="the MediaErrorSnackBar should not open when there local tracks are being acquired" name="the MediaErrorSnackBar should not open when there local tracks are being acquired" time="0.001">
+    </testcase>
+    <testcase classname="the MediaErrorSnackBar should close after the handleClose function is called" name="the MediaErrorSnackBar should close after the handleClose function is called" time="0.001">
+    </testcase>
+    <testcase classname="the getSnackbarContent function return empty strings by default" name="the getSnackbarContent function return empty strings by default" time="0.003">
+    </testcase>
+    <testcase classname="the getSnackbarContent function should return the correct content when there are no audio devices" name="the getSnackbarContent function should return the correct content when there are no audio devices" time="0.001">
+    </testcase>
+    <testcase classname="the getSnackbarContent function should return the correct content when there are no video devices" name="the getSnackbarContent function should return the correct content when there are no video devices" time="0.001">
+    </testcase>
+    <testcase classname="the getSnackbarContent function should return the correct content when there are no audio or video devices" name="the getSnackbarContent function should return the correct content when there are no audio or video devices" time="0">
+    </testcase>
+    <testcase classname="the getSnackbarContent function should return the correct content when there is a NotAllowedError" name="the getSnackbarContent function should return the correct content when there is a NotAllowedError" time="0.001">
+    </testcase>
+    <testcase classname="the getSnackbarContent function should return the correct content when there is a NotAllowedError with &quot;Permission denied by syste&quot; message" name="the getSnackbarContent function should return the correct content when there is a NotAllowedError with &quot;Permission denied by syste&quot; message" time="0">
+    </testcase>
+    <testcase classname="the getSnackbarContent function should return the correct content when there is a NotFoundError" name="the getSnackbarContent function should return the correct content when there is a NotFoundError" time="0">
+    </testcase>
+    <testcase classname="the getSnackbarContent function should return the correct content when there is any other kind of error" name="the getSnackbarContent function should return the correct content when there is any other kind of error" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the App component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:26" time="0.405" tests="3">
+    <testcase classname="the App component should render correctly when disconnected from a room" name="the App component should render correctly when disconnected from a room" time="0.015">
+    </testcase>
+    <testcase classname="the App component should render correctly when connected (or reconnecting) to a room" name="the App component should render correctly when connected (or reconnecting) to a room" time="0.015">
+    </testcase>
+    <testcase classname="the App component should set the height of the main container using the useHeight hook" name="the App component should set the height of the main container using the useHeight hook" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the VideoTrack component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:26" time="0.516" tests="12">
+    <testcase classname="the VideoTrack component should call the attach method when the component mounts" name="the VideoTrack component should call the attach method when the component mounts" time="0.02">
+    </testcase>
+    <testcase classname="the VideoTrack component should have &quot;object-fit: cover&quot; applied when the track is a camera track" name="the VideoTrack component should have &quot;object-fit: cover&quot; applied when the track is a camera track" time="0.006">
+    </testcase>
+    <testcase classname="the VideoTrack component should have &quot;object-fit: contain&quot; applied when the track is a screen track" name="the VideoTrack component should have &quot;object-fit: contain&quot; applied when the track is a screen track" time="0.004">
+    </testcase>
+    <testcase classname="the VideoTrack component should have &quot;object-fit: contain&quot; applied when the track is a camera track in portrait orientation" name="the VideoTrack component should have &quot;object-fit: contain&quot; applied when the track is a camera track in portrait orientation" time="0.005">
+    </testcase>
+    <testcase classname="the VideoTrack component it should call the detach method when the component unmounts" name="the VideoTrack component it should call the detach method when the component unmounts" time="0.005">
+    </testcase>
+    <testcase classname="the VideoTrack component should flip the video horizontally if the track is local" name="the VideoTrack component should flip the video horizontally if the track is local" time="0.005">
+    </testcase>
+    <testcase classname="the VideoTrack component should not flip the video horizontally if the track is the local rear-facing camera" name="the VideoTrack component should not flip the video horizontally if the track is the local rear-facing camera" time="0.004">
+    </testcase>
+    <testcase classname="the VideoTrack component should not flip the video horizontally if the track is not local" name="the VideoTrack component should not flip the video horizontally if the track is not local" time="0.004">
+    </testcase>
+    <testcase classname="the VideoTrack component should set the track priority when it is attached" name="the VideoTrack component should set the track priority when it is attached" time="0.003">
+    </testcase>
+    <testcase classname="the VideoTrack component should set the track priority to &quot;null&quot; when it is detached and set the priority of the new track" name="the VideoTrack component should set the track priority to &quot;null&quot; when it is detached and set the priority of the new track" time="0.006">
+    </testcase>
+    <testcase classname="the VideoTrack component should set the track priority to &quot;null&quot; when it is unmounted" name="the VideoTrack component should set the track priority to &quot;null&quot; when it is unmounted" time="0.005">
+    </testcase>
+    <testcase classname="the VideoTrack component should not set the track priority on mount or unmount when no priority is specified" name="the VideoTrack component should not set the track priority on mount or unmount when no priority is specified" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the MenuBar component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:27" time="0.314" tests="4">
+    <testcase classname="the MenuBar component should disable toggle buttons while reconnecting to the room" name="the MenuBar component should disable toggle buttons while reconnecting to the room" time="0.03">
+    </testcase>
+    <testcase classname="the MenuBar component should enable toggle buttons while connected to the room" name="the MenuBar component should enable toggle buttons while connected to the room" time="0.014">
+    </testcase>
+    <testcase classname="the MenuBar component should hide the ToggleScreenShareButton and show the &quot;You are sharing your screen&quot; banner when isSharingScreen is true" name="the MenuBar component should hide the ToggleScreenShareButton and show the &quot;You are sharing your screen&quot; banner when isSharingScreen is true" time="0.014">
+    </testcase>
+    <testcase classname="the MenuBar component should call toggleScreenShare when the &quot;Stop Sharing&quot; button is clicked" name="the MenuBar component should call toggleScreenShare when the &quot;Stop Sharing&quot; button is clicked" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="the FlipCameraButton" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:27" time="0.448" tests="5">
+    <testcase classname="the FlipCameraButton should render a button when a video track exists and has the facingMode setting" name="the FlipCameraButton should render a button when a video track exists and has the facingMode setting" time="0.06">
+    </testcase>
+    <testcase classname="the FlipCameraButton not render a button when the video track does not have the facingMode setting" name="the FlipCameraButton not render a button when the video track does not have the facingMode setting" time="0.003">
+    </testcase>
+    <testcase classname="the FlipCameraButton should not render a button when no video track is present" name="the FlipCameraButton should not render a button when no video track is present" time="0.002">
+    </testcase>
+    <testcase classname="the FlipCameraButton should not render a button when there are less than two video input devices" name="the FlipCameraButton should not render a button when there are less than two video input devices" time="0.003">
+    </testcase>
+    <testcase classname="the FlipCameraButton should call track.replace() with the correct facing mode when clicked" name="the FlipCameraButton should call track.replace() with the correct facing mode when clicked" time="0.035">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ErrorDialog component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:27" time="0.316" tests="6">
+    <testcase classname="the ErrorDialog component should be closed if no error is passed" name="the ErrorDialog component should be closed if no error is passed" time="0.009">
+    </testcase>
+    <testcase classname="the ErrorDialog component should be open if an error is passed" name="the ErrorDialog component should be open if an error is passed" time="0.008">
+    </testcase>
+    <testcase classname="the ErrorDialog component should display error message but not error code is the later does not exist" name="the ErrorDialog component should display error message but not error code is the later does not exist" time="0.012">
+    </testcase>
+    <testcase classname="the ErrorDialog component should display error message and error code when both are given" name="the ErrorDialog component should display error message and error code when both are given" time="0.009">
+    </testcase>
+    <testcase classname="the ErrorDialog component should display an enhanced error message when error code is 20101" name="the ErrorDialog component should display an enhanced error message when error code is 20101" time="0.006">
+    </testcase>
+    <testcase classname="the ErrorDialog component should invoke dismissError prop when the user clicks on OK button" name="the ErrorDialog component should invoke dismissError prop when the user clicks on OK button" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useAppState hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:27" time="0.181" tests="8">
+    <testcase classname="the useAppState hook should set an error" name="the useAppState hook should set an error" time="0.007">
+    </testcase>
+    <testcase classname="the useAppState hook should throw an error if used outside of AppStateProvider" name="the useAppState hook should throw an error if used outside of AppStateProvider" time="0.002">
+    </testcase>
+    <testcase classname="the useAppState hook should get a token using the REACT_APP_TOKEN_ENDPOINT environment variable when avaiable" name="the useAppState hook should get a token using the REACT_APP_TOKEN_ENDPOINT environment variable when avaiable" time="0.005">
+    </testcase>
+    <testcase classname="the useAppState hook with auth disabled should not use any auth hooks" name="the useAppState hook with auth disabled should not use any auth hooks" time="0.002">
+    </testcase>
+    <testcase classname="the useAppState hook with firebase auth enabled should use the useFirebaseAuth hook" name="the useAppState hook with firebase auth enabled should use the useFirebaseAuth hook" time="0.001">
+    </testcase>
+    <testcase classname="the useAppState hook with passcode auth enabled should use the usePasscodeAuth hook" name="the useAppState hook with passcode auth enabled should use the usePasscodeAuth hook" time="0.002">
+    </testcase>
+    <testcase classname="the useAppState hook the getToken function should set isFetching to true after getToken is called, and false after getToken succeeds" name="the useAppState hook the getToken function should set isFetching to true after getToken is called, and false after getToken succeeds" time="0.006">
+    </testcase>
+    <testcase classname="the useAppState hook the getToken function should set isFetching to true after getToken is called, and false after getToken succeeds" name="the useAppState hook the getToken function should set isFetching to true after getToken is called, and false after getToken succeeds" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useFirebaseAuth hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:27" time="0.361" tests="4">
+    <testcase classname="the useFirebaseAuth hook should set isAuthReady to true and set a user on load" name="the useFirebaseAuth hook should set isAuthReady to true and set a user on load" time="0.005">
+    </testcase>
+    <testcase classname="the useFirebaseAuth hook should set user to null on signOut" name="the useFirebaseAuth hook should set user to null on signOut" time="0.003">
+    </testcase>
+    <testcase classname="the useFirebaseAuth hook should set a new user on signIn" name="the useFirebaseAuth hook should set a new user on signIn" time="0.002">
+    </testcase>
+    <testcase classname="the useFirebaseAuth hook should include the users idToken in request to the video token server" name="the useFirebaseAuth hook should include the users idToken in request to the video token server" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the UnsupportedBrowserWarning component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:28" time="0.22" tests="2">
+    <testcase classname="the UnsupportedBrowserWarning component should render correctly when isSupported is false" name="the UnsupportedBrowserWarning component should render correctly when isSupported is false" time="0.007">
+    </testcase>
+    <testcase classname="the UnsupportedBrowserWarning component should render children when isSupported is true" name="the UnsupportedBrowserWarning component should render children when isSupported is true" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the SettingsMenu component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:28" time="0.394" tests="9">
+    <testcase classname="the SettingsMenu component on desktop devices should open the Menu when the Button is clicked" name="the SettingsMenu component on desktop devices should open the Menu when the Button is clicked" time="0.019">
+    </testcase>
+    <testcase classname="the SettingsMenu component on desktop devices should open the AboutDialog when the About button is clicked" name="the SettingsMenu component on desktop devices should open the AboutDialog when the About button is clicked" time="0.014">
+    </testcase>
+    <testcase classname="the SettingsMenu component on desktop devices should open the DeviceSelectionDialog when the Settings button is clicked" name="the SettingsMenu component on desktop devices should open the DeviceSelectionDialog when the Settings button is clicked" time="0.012">
+    </testcase>
+    <testcase classname="the SettingsMenu component on desktop devices should open the ConnectionOptionsDialog when the Settings button is clicked" name="the SettingsMenu component on desktop devices should open the ConnectionOptionsDialog when the Settings button is clicked" time="0.009">
+    </testcase>
+    <testcase classname="the SettingsMenu component on desktop devices should render the correct button" name="the SettingsMenu component on desktop devices should render the correct button" time="0.003">
+    </testcase>
+    <testcase classname="the SettingsMenu component on desktop devices should render the &quot;Connection Settings&quot; button when the roomType is &quot;group&quot;" name="the SettingsMenu component on desktop devices should render the &quot;Connection Settings&quot; button when the roomType is &quot;group&quot;" time="0.003">
+    </testcase>
+    <testcase classname="the SettingsMenu component on desktop devices should not render the &quot;Connection Settings&quot; button when the roomType is &quot;go&quot;" name="the SettingsMenu component on desktop devices should not render the &quot;Connection Settings&quot; button when the roomType is &quot;go&quot;" time="0.006">
+    </testcase>
+    <testcase classname="the SettingsMenu component on desktop devices should not render the &quot;Connection Settings&quot; button when the roomType is &quot;peer-to-peer&quot;" name="the SettingsMenu component on desktop devices should not render the &quot;Connection Settings&quot; button when the roomType is &quot;peer-to-peer&quot;" time="0.004">
+    </testcase>
+    <testcase classname="the SettingsMenu component on mobile devices should render the correct icon" name="the SettingsMenu component on mobile devices should render the correct icon" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the PrivateRoute component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:28" time="0.24" tests="4">
+    <testcase classname="the PrivateRoute component with auth enabled when isAuthReady is true should redirect to /login when there is no user" name="the PrivateRoute component with auth enabled when isAuthReady is true should redirect to /login when there is no user" time="0.041">
+    </testcase>
+    <testcase classname="the PrivateRoute component with auth enabled when isAuthReady is true should render children when there is a user" name="the PrivateRoute component with auth enabled when isAuthReady is true should render children when there is a user" time="0.023">
+    </testcase>
+    <testcase classname="the PrivateRoute component with auth enabled when isAuthReady is false should not render children" name="the PrivateRoute component with auth enabled when isAuthReady is false should not render children" time="0.009">
+    </testcase>
+    <testcase classname="the PrivateRoute component with auth disabled should render children when there is no user and isAuthReady is false" name="the PrivateRoute component with auth disabled should render children when there is no user and isAuthReady is false" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="the AudioLevelIndicator component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:29" time="0.163" tests="4">
+    <testcase classname="the AudioLevelIndicator component when the audioTrack is not enabled should render a mute icon" name="the AudioLevelIndicator component when the audioTrack is not enabled should render a mute icon" time="0.004">
+    </testcase>
+    <testcase classname="the AudioLevelIndicator component when the audioTrack is not enabled should change the color of the mute icon when color prop is used" name="the AudioLevelIndicator component when the audioTrack is not enabled should change the color of the mute icon when color prop is used" time="0.008">
+    </testcase>
+    <testcase classname="the AudioLevelIndicator component when the audioTrack is enabled should render the audio level icon" name="the AudioLevelIndicator component when the audioTrack is enabled should render the audio level icon" time="0.006">
+    </testcase>
+    <testcase classname="the AudioLevelIndicator component when the audioTrack is enabled should change the color of the audio level icon when color prop is used" name="the AudioLevelIndicator component when the audioTrack is enabled should change the color of the audio level icon when color prop is used" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useRoom hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:29" time="0.208" tests="10">
+    <testcase classname="the useRoom hook should return an empty room when no token is provided" name="the useRoom hook should return an empty room when no token is provided" time="0.004">
+    </testcase>
+    <testcase classname="the useRoom hook should set isConnecting to true while connecting to the room " name="the useRoom hook should set isConnecting to true while connecting to the room " time="0.013">
+    </testcase>
+    <testcase classname="the useRoom hook should set the priority of video tracks to low" name="the useRoom hook should set the priority of video tracks to low" time="0.004">
+    </testcase>
+    <testcase classname="the useRoom hook should return a room after connecting to a room" name="the useRoom hook should return a room after connecting to a room" time="0.004">
+    </testcase>
+    <testcase classname="the useRoom hook should add a listener for the &quot;beforeUnload&quot; event when connected to a room" name="the useRoom hook should add a listener for the &quot;beforeUnload&quot; event when connected to a room" time="0.005">
+    </testcase>
+    <testcase classname="the useRoom hook should remove the listener for the &quot;beforeUnload&quot; event when the room is disconnected" name="the useRoom hook should remove the listener for the &quot;beforeUnload&quot; event when the room is disconnected" time="0.004">
+    </testcase>
+    <testcase classname="the useRoom hook should call onError and set isConnecting to false when there is an error" name="the useRoom hook should call onError and set isConnecting to false when there is an error" time="0.002">
+    </testcase>
+    <testcase classname="the useRoom hook should reset the room object on disconnect" name="the useRoom hook should reset the room object on disconnect" time="0.006">
+    </testcase>
+    <testcase classname="the useRoom hook when isMobile is true should add a listener for the &quot;pagehide&quot; event when connected to a room" name="the useRoom hook when isMobile is true should add a listener for the &quot;pagehide&quot; event when connected to a room" time="0.004">
+    </testcase>
+    <testcase classname="the useRoom hook when isMobile is true should remove the listener for the &quot;pagehide&quot; event when the room is disconnected" name="the useRoom hook when isMobile is true should remove the listener for the &quot;pagehide&quot; event when the room is disconnected" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the IntroContainer component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:29" time="0.316" tests="5">
+    <testcase classname="the IntroContainer component should render the UserMenu when a user object exists and the pathname is not /login" name="the IntroContainer component should render the UserMenu when a user object exists and the pathname is not /login" time="0.025">
+    </testcase>
+    <testcase classname="the IntroContainer component should not render the UserMenu when the pathname is /login" name="the IntroContainer component should not render the UserMenu when the pathname is /login" time="0.006">
+    </testcase>
+    <testcase classname="the IntroContainer component should not render the UserMenu when a user object does not exist" name="the IntroContainer component should not render the UserMenu when a user object does not exist" time="0.006">
+    </testcase>
+    <testcase classname="the IntroContainer component should render children" name="the IntroContainer component should render children" time="0.007">
+    </testcase>
+    <testcase classname="the IntroContainer component should render subcontent when provided" name="the IntroContainer component should render subcontent when provided" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ConnectionOptionsDialog component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:29" time="0.316" tests="5">
+    <testcase classname="the ConnectionOptionsDialog component when not connected to a room should render correctly" name="the ConnectionOptionsDialog component when not connected to a room should render correctly" time="0.017">
+    </testcase>
+    <testcase classname="the ConnectionOptionsDialog component when not connected to a room should dispatch settings changes" name="the ConnectionOptionsDialog component when not connected to a room should dispatch settings changes" time="0.03">
+    </testcase>
+    <testcase classname="the ConnectionOptionsDialog component when not connected to a room should not dispatch settings changes from a number field when there are non-digits in the value" name="the ConnectionOptionsDialog component when not connected to a room should not dispatch settings changes from a number field when there are non-digits in the value" time="0.015">
+    </testcase>
+    <testcase classname="the ConnectionOptionsDialog component when not connected to a room should dispatch settings changes from a number field when there are only digits in the value" name="the ConnectionOptionsDialog component when not connected to a room should dispatch settings changes from a number field when there are only digits in the value" time="0.016">
+    </testcase>
+    <testcase classname="the ConnectionOptionsDialog component when connected to a room should render correctly" name="the ConnectionOptionsDialog component when connected to a room should render correctly" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="the MainParticipant component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:29" time="0.247" tests="6">
+    <testcase classname="the MainParticipant component should set the videoPriority to high when the main participant is the selected participant" name="the MainParticipant component should set the videoPriority to high when the main participant is the selected participant" time="0.007">
+    </testcase>
+    <testcase classname="the MainParticipant component should set the videoPriority to high when the main participant is sharing their screen" name="the MainParticipant component should set the videoPriority to high when the main participant is sharing their screen" time="0.006">
+    </testcase>
+    <testcase classname="the MainParticipant component when the main participant is the localParticipant should not set the videoPriority" name="the MainParticipant component when the main participant is the localParticipant should not set the videoPriority" time="0.005">
+    </testcase>
+    <testcase classname="the MainParticipant component when the main participant is the localParticipant should set the enableScreenShare prop to false" name="the MainParticipant component when the main participant is the localParticipant should set the enableScreenShare prop to false" time="0.004">
+    </testcase>
+    <testcase classname="the MainParticipant component when the main participant is the localParticipant should set the isLocalParticipant prop to true" name="the MainParticipant component when the main participant is the localParticipant should set the isLocalParticipant prop to true" time="0.005">
+    </testcase>
+    <testcase classname="the MainParticipant component should set the videoPriority to null when the main participant is not the selected participant and they are not sharing their screen" name="the MainParticipant component should set the videoPriority to null when the main participant is not the selected participant and they are not sharing their screen" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ParticipantConnectionIndicator component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:29" time="0.249" tests="4">
+    <testcase classname="the ParticipantConnectionIndicator component when the participant is reconnecting should render the correct toolip" name="the ParticipantConnectionIndicator component when the participant is reconnecting should render the correct toolip" time="0.008">
+    </testcase>
+    <testcase classname="the ParticipantConnectionIndicator component when the participant is reconnecting should have isReconnecting css class" name="the ParticipantConnectionIndicator component when the participant is reconnecting should have isReconnecting css class" time="0.002">
+    </testcase>
+    <testcase classname="the ParticipantConnectionIndicator component when the participant is not reconnecting should render the correct tooltip" name="the ParticipantConnectionIndicator component when the participant is not reconnecting should render the correct tooltip" time="0.003">
+    </testcase>
+    <testcase classname="the ParticipantConnectionIndicator component when the participant is not reconnecting should not have isReconnecting css class" name="the ParticipantConnectionIndicator component when the participant is not reconnecting should not have isReconnecting css class" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useConnectionOptions function" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:30" time="0.129" tests="4">
+    <testcase classname="the useConnectionOptions function should remove any undefined values from settings" name="the useConnectionOptions function should remove any undefined values from settings" time="0.002">
+    </testcase>
+    <testcase classname="the useConnectionOptions function should correctly generate settings" name="the useConnectionOptions function should correctly generate settings" time="0">
+    </testcase>
+    <testcase classname="the useConnectionOptions function should disable simulcast when the room type is peer to peer" name="the useConnectionOptions function should disable simulcast when the room type is peer to peer" time="0.001">
+    </testcase>
+    <testcase classname="the useConnectionOptions function should disable simulcast when the room type is &quot;go&quot;" name="the useConnectionOptions function should disable simulcast when the room type is &quot;go&quot;" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="the PreflightTest component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:30" time="0.373" tests="8">
+    <testcase classname="the PreflightTest component should render correctly when the test is in progress" name="the PreflightTest component should render correctly when the test is in progress" time="0.016">
+    </testcase>
+    <testcase classname="the PreflightTest component should render correctly when there is a report" name="the PreflightTest component should render correctly when there is a report" time="0.004">
+    </testcase>
+    <testcase classname="the PreflightTest component should render correctly when there is a failure" name="the PreflightTest component should render correctly when there is a failure" time="0.005">
+    </testcase>
+    <testcase classname="the Result component should render correctly when the network condition is green" name="the Result component should render correctly when the network condition is green" time="0.001">
+    </testcase>
+    <testcase classname="the Result component should render correctly when the network condition is yellow" name="the Result component should render correctly when the network condition is yellow" time="0.001">
+    </testcase>
+    <testcase classname="the Result component should render correctly when the network condition is red" name="the Result component should render correctly when the network condition is red" time="0.001">
+    </testcase>
+    <testcase classname="the Result component should render correctly when there is an error" name="the Result component should render correctly when there is an error" time="0.009">
+    </testcase>
+    <testcase classname="the Result component should not render anything when there are no props" name="the Result component should not render anything when there are no props" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="the usePreflightTest hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:30" time="0.376" tests="6">
+    <testcase classname="the usePreflightTest hook should return a testReport when the test succeeds" name="the usePreflightTest hook should return a testReport when the test succeeds" time="0.005">
+    </testcase>
+    <testcase classname="the usePreflightTest hook should set isTestRunning to true when the test is running" name="the usePreflightTest hook should set isTestRunning to true when the test is running" time="0.004">
+    </testcase>
+    <testcase classname="the usePreflightTest hook should ignore a rerender when the test is in progress" name="the usePreflightTest hook should ignore a rerender when the test is in progress" time="0.004">
+    </testcase>
+    <testcase classname="the usePreflightTest hook should return a testFailure when there is an error" name="the usePreflightTest hook should return a testFailure when there is an error" time="0.005">
+    </testcase>
+    <testcase classname="the usePreflightTest hook should stop the test when the hook is unmounted" name="the usePreflightTest hook should stop the test when the hook is unmounted" time="0.006">
+    </testcase>
+    <testcase classname="the usePreflightTest hook should stop the test when connecting to a room" name="the usePreflightTest hook should stop the test when connecting to a room" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the UserMenu component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:30" time="0.327" tests="3">
+    <testcase classname="the UserMenu component when logged in with firebase should open the menu when clicked" name="the UserMenu component when logged in with firebase should open the menu when clicked" time="0.018">
+    </testcase>
+    <testcase classname="the UserMenu component when logged in with firebase should stop all tracks and signout when the Logout button is clicked" name="the UserMenu component when logged in with firebase should stop all tracks and signout when the Logout button is clicked" time="0.003">
+    </testcase>
+    <testcase classname="the UserMenu component when logged in with passcode auth should stop all tracks and signout when the Logout link is clicked" name="the UserMenu component when logged in with passcode auth should stop all tracks and signout when the Logout link is clicked" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="the AudioInputList component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:31" time="0.296" tests="5">
+    <testcase classname="the AudioInputList component should display the name of the local audio track when only one is avaiable" name="the AudioInputList component should display the name of the local audio track when only one is avaiable" time="0.012">
+    </testcase>
+    <testcase classname="the AudioInputList component should display &quot;No Local Audio&quot; when there is no local audio track" name="the AudioInputList component should display &quot;No Local Audio&quot; when there is no local audio track" time="0.005">
+    </testcase>
+    <testcase classname="the AudioInputList component should render a Select menu when there are multiple audio input devices" name="the AudioInputList component should render a Select menu when there are multiple audio input devices" time="0.009">
+    </testcase>
+    <testcase classname="the AudioInputList component should save the deviceId in localStorage when the audio input device is changed" name="the AudioInputList component should save the deviceId in localStorage when the audio input device is changed" time="0.003">
+    </testcase>
+    <testcase classname="the AudioInputList component should call track.restart with the new deviceId when the audio input device is changed" name="the AudioInputList component should call track.restart with the new deviceId when the audio input device is changed" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ToggleScreenShareButton component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:31" time="0.416" tests="4">
+    <testcase classname="the ToggleScreenShareButton component should render correctly when screenSharing is allowed" name="the ToggleScreenShareButton component should render correctly when screenSharing is allowed" time="0.09">
+    </testcase>
+    <testcase classname="the ToggleScreenShareButton component should render correctly when another user is sharing their screen" name="the ToggleScreenShareButton component should render correctly when another user is sharing their screen" time="0.016">
+    </testcase>
+    <testcase classname="the ToggleScreenShareButton component should call the correct toggle function when clicked" name="the ToggleScreenShareButton component should call the correct toggle function when clicked" time="0.006">
+    </testcase>
+    <testcase classname="the ToggleScreenShareButton component should render the screenshare button with the correct messaging if screensharing is not supported" name="the ToggleScreenShareButton component should render the screenshare button with the correct messaging if screensharing is not supported" time="0.017">
+    </testcase>
+  </testsuite>
+  <testsuite name="the VideoInputList component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:31" time="0.374" tests="5">
+    <testcase classname="the VideoInputList component with only one video input device should not display a Select menu and instead display the name of the local video track" name="the VideoInputList component with only one video input device should not display a Select menu and instead display the name of the local video track" time="0.016">
+    </testcase>
+    <testcase classname="the VideoInputList component with only one video input device should display &quot;No Local Video&quot; when there is no local video track" name="the VideoInputList component with only one video input device should display &quot;No Local Video&quot; when there is no local video track" time="0.005">
+    </testcase>
+    <testcase classname="the VideoInputList component should render a Select menu when there are multiple video input devices" name="the VideoInputList component should render a Select menu when there are multiple video input devices" time="0.009">
+    </testcase>
+    <testcase classname="the VideoInputList component should save the deviceId in localStorage when the video input device is changed" name="the VideoInputList component should save the deviceId in localStorage when the video input device is changed" time="0.006">
+    </testcase>
+    <testcase classname="the VideoInputList component should call track.restart with the new deviceId when the video input device is changed" name="the VideoInputList component should call track.restart with the new deviceId when the video input device is changed" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the AudioOutputList component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:32" time="0.421" tests="3">
+    <testcase classname="the AudioOutputList component should display the name of the active output device if only one is available" name="the AudioOutputList component should display the name of the active output device if only one is available" time="0.01">
+    </testcase>
+    <testcase classname="the AudioOutputList component should display &quot;System Default Audio Output&quot; when no audio output devices are available" name="the AudioOutputList component should display &quot;System Default Audio Output&quot; when no audio output devices are available" time="0.008">
+    </testcase>
+    <testcase classname="the AudioOutputList component should display a Select menu when multiple audio output devices are available" name="the AudioOutputList component should display a Select menu when multiple audio output devices are available" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the Menu component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:32" time="0.497" tests="5">
+    <testcase classname="the Menu component on desktop devices should open the Menu when the Button is clicked" name="the Menu component on desktop devices should open the Menu when the Button is clicked" time="0.015">
+    </testcase>
+    <testcase classname="the Menu component on desktop devices should open the AboutDialog when the About button is clicked" name="the Menu component on desktop devices should open the AboutDialog when the About button is clicked" time="0.012">
+    </testcase>
+    <testcase classname="the Menu component on desktop devices should open the DeviceSelectionDialog when the Settings button is clicked" name="the Menu component on desktop devices should open the DeviceSelectionDialog when the Settings button is clicked" time="0.012">
+    </testcase>
+    <testcase classname="the Menu component on desktop devices should render the correct icon" name="the Menu component on desktop devices should render the correct icon" time="0.007">
+    </testcase>
+    <testcase classname="the Menu component on mobile devices should render the correct icon" name="the Menu component on mobile devices should render the correct icon" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="the usePublicationIsTrackEnabled hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:32" time="0.211" tests="5">
+    <testcase classname="the usePublicationIsTrackEnabled hook should return false when track is undefined" name="the usePublicationIsTrackEnabled hook should return false when track is undefined" time="0.007">
+    </testcase>
+    <testcase classname="the usePublicationIsTrackEnabled hook should return mockTrack.isTrackEnabled by default" name="the usePublicationIsTrackEnabled hook should return mockTrack.isTrackEnabled by default" time="0.003">
+    </testcase>
+    <testcase classname="the usePublicationIsTrackEnabled hook should return respond to &quot;subscribed&quot; events" name="the usePublicationIsTrackEnabled hook should return respond to &quot;subscribed&quot; events" time="0.029">
+    </testcase>
+    <testcase classname="the usePublicationIsTrackEnabled hook should return respond to &quot;unsubscribed&quot; events" name="the usePublicationIsTrackEnabled hook should return respond to &quot;unsubscribed&quot; events" time="0.003">
+    </testcase>
+    <testcase classname="the usePublicationIsTrackEnabled hook should clean up listeners on unmount" name="the usePublicationIsTrackEnabled hook should clean up listeners on unmount" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useScreenShareParticipant hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:32" time="0.282" tests="7">
+    <testcase classname="the useScreenShareParticipant hook return undefined when there are no participants sharing their screen" name="the useScreenShareParticipant hook return undefined when there are no participants sharing their screen" time="0.038">
+    </testcase>
+    <testcase classname="the useScreenShareParticipant hook should return the localParticipant when they are sharing their screen" name="the useScreenShareParticipant hook should return the localParticipant when they are sharing their screen" time="0.004">
+    </testcase>
+    <testcase classname="the useScreenShareParticipant hook should return a remoteParticipant when they are sharing their screen" name="the useScreenShareParticipant hook should return a remoteParticipant when they are sharing their screen" time="0.003">
+    </testcase>
+    <testcase classname="the useScreenShareParticipant hook should respond to &quot;trackPublished&quot; and &quot;trackUnpublished&quot; events emitted from the localParticipant" name="the useScreenShareParticipant hook should respond to &quot;trackPublished&quot; and &quot;trackUnpublished&quot; events emitted from the localParticipant" time="0.004">
+    </testcase>
+    <testcase classname="the useScreenShareParticipant hook should respond to &quot;trackPublished&quot; and &quot;trackUnpublished&quot; events emitted from the room" name="the useScreenShareParticipant hook should respond to &quot;trackPublished&quot; and &quot;trackUnpublished&quot; events emitted from the room" time="0.003">
+    </testcase>
+    <testcase classname="the useScreenShareParticipant hook should respond to &quot;participantDisconnected&quot; events emitted from the room" name="the useScreenShareParticipant hook should respond to &quot;participantDisconnected&quot; events emitted from the room" time="0.003">
+    </testcase>
+    <testcase classname="the useScreenShareParticipant hook should clean up all listeners when unmounted" name="the useScreenShareParticipant hook should clean up all listeners when unmounted" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useSelectedParticipant hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:33" time="0.185" tests="6">
+    <testcase classname="the useSelectedParticipant hook should return null as the default value" name="the useSelectedParticipant hook should return null as the default value" time="0.005">
+    </testcase>
+    <testcase classname="the useSelectedParticipant hook should set a selected participant" name="the useSelectedParticipant hook should set a selected participant" time="0.004">
+    </testcase>
+    <testcase classname="the useSelectedParticipant hook should set &quot;null&quot; as the selected participant when the user selects the currently selected participant" name="the useSelectedParticipant hook should set &quot;null&quot; as the selected participant when the user selects the currently selected participant" time="0.003">
+    </testcase>
+    <testcase classname="the useSelectedParticipant hook should set &quot;null&quot; as the selected participant on room disconnect" name="the useSelectedParticipant hook should set &quot;null&quot; as the selected participant on room disconnect" time="0.004">
+    </testcase>
+    <testcase classname="the useSelectedParticipant hook should set &quot;null&quot; as the selected participant when the participant disconnects from the room" name="the useSelectedParticipant hook should set &quot;null&quot; as the selected participant when the participant disconnects from the room" time="0.013">
+    </testcase>
+    <testcase classname="the useSelectedParticipant hook should not set &quot;null&quot; as the selected participant when a non-selected participant disconnects from the room" name="the useSelectedParticipant hook should not set &quot;null&quot; as the selected participant when a non-selected participant disconnects from the room" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useDevices hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:33" time="0.221" tests="9">
+    <testcase classname="the useDevices hook should correctly return a list of devices" name="the useDevices hook should correctly return a list of devices" time="0.006">
+    </testcase>
+    <testcase classname="the useDevices hook should respond to &quot;devicechange&quot; events" name="the useDevices hook should respond to &quot;devicechange&quot; events" time="0.005">
+    </testcase>
+    <testcase classname="the useAudioInputDevices hook should return a list of audio input devices" name="the useAudioInputDevices hook should return a list of audio input devices" time="0.004">
+    </testcase>
+    <testcase classname="the useVideoInputDevices hook should return a list of video input devices" name="the useVideoInputDevices hook should return a list of video input devices" time="0.004">
+    </testcase>
+    <testcase classname="the useAudioOutputDevices hook should return a list of audio output devices" name="the useAudioOutputDevices hook should return a list of audio output devices" time="0.003">
+    </testcase>
+    <testcase classname="the useHasAudioInputDevices hook should return true when there are audio input devices" name="the useHasAudioInputDevices hook should return true when there are audio input devices" time="0.003">
+    </testcase>
+    <testcase classname="the useHasAudioInputDevices hook should return false when there are no audio input devices" name="the useHasAudioInputDevices hook should return false when there are no audio input devices" time="0.002">
+    </testcase>
+    <testcase classname="the useHasVideoInputDevices hook should return true when there are video input devices" name="the useHasVideoInputDevices hook should return true when there are video input devices" time="0.002">
+    </testcase>
+    <testcase classname="the useHasVideoInputDevices hook should return false when there are no video input devices" name="the useHasVideoInputDevices hook should return false when there are no video input devices" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the UserAvatar component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:33" time="0.291" tests="4">
+    <testcase classname="the UserAvatar component should display the users initials when there is a displayName property" name="the UserAvatar component should display the users initials when there is a displayName property" time="0.01">
+    </testcase>
+    <testcase classname="the UserAvatar component should display the Person icon when there is no displayName or photoURL properties" name="the UserAvatar component should display the Person icon when there is no displayName or photoURL properties" time="0.008">
+    </testcase>
+    <testcase classname="the UserAvatar component should display the users photo when the photoURL property exists" name="the UserAvatar component should display the users photo when the photoURL property exists" time="0.008">
+    </testcase>
+    <testcase classname="the UserAvatar component getInitials function should generate initials from a name" name="the UserAvatar component getInitials function should generate initials from a name" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ToggleVideoButton component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:33" time="0.185" tests="5">
+    <testcase classname="the ToggleVideoButton component should render correctly when video is enabled" name="the ToggleVideoButton component should render correctly when video is enabled" time="0.003">
+    </testcase>
+    <testcase classname="the ToggleVideoButton component should render correctly when video is disabled" name="the ToggleVideoButton component should render correctly when video is disabled" time="0.002">
+    </testcase>
+    <testcase classname="the ToggleVideoButton component should render correctly when no video devices exist" name="the ToggleVideoButton component should render correctly when no video devices exist" time="0.002">
+    </testcase>
+    <testcase classname="the ToggleVideoButton component should call the correct toggle function when clicked" name="the ToggleVideoButton component should call the correct toggle function when clicked" time="0.001">
+    </testcase>
+    <testcase classname="the ToggleVideoButton component should throttle the toggle function to 200ms" name="the ToggleVideoButton component should throttle the toggle function to 200ms" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ParticipantTracks component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:33" time="0.154" tests="4">
+    <testcase classname="the ParticipantTracks component should render an array of publications" name="the ParticipantTracks component should render an array of publications" time="0.004">
+    </testcase>
+    <testcase classname="the ParticipantTracks component should filter out any screen share publications" name="the ParticipantTracks component should filter out any screen share publications" time="0.003">
+    </testcase>
+    <testcase classname="the ParticipantTracks component with enableScreenShare prop should filter out camera publications when a screen share publication is present" name="the ParticipantTracks component with enableScreenShare prop should filter out camera publications when a screen share publication is present" time="0.013">
+    </testcase>
+    <testcase classname="the ParticipantTracks component with enableScreenShare prop should render camera publications when a screen share publication is absent" name="the ParticipantTracks component with enableScreenShare prop should render camera publications when a screen share publication is absent" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useMainParticipant hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:33" time="0.124" tests="4">
+    <testcase classname="the useMainParticipant hook should return the dominant speaker if it exists" name="the useMainParticipant hook should return the dominant speaker if it exists" time="0.004">
+    </testcase>
+    <testcase classname="the useMainParticipant hook should return the first remote participant if it exists" name="the useMainParticipant hook should return the first remote participant if it exists" time="0.002">
+    </testcase>
+    <testcase classname="the useMainParticipant hook should return the local participant if it exists" name="the useMainParticipant hook should return the local participant if it exists" time="0.002">
+    </testcase>
+    <testcase classname="the useMainParticipant hook should return the selected participant if it exists" name="the useMainParticipant hook should return the selected participant if it exists" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the usePasscodeAuth hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:22" time="12.324" tests="17">
+    <testcase classname="the usePasscodeAuth hook on first render should return a user when the passcode is valid" name="the usePasscodeAuth hook on first render should return a user when the passcode is valid" time="0.041">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook on first render should remove the query parameter from the URL when the passcode is valid" name="the usePasscodeAuth hook on first render should remove the query parameter from the URL when the passcode is valid" time="0.006">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook on first render should not return a user when the app code is invalid" name="the usePasscodeAuth hook on first render should not return a user when the app code is invalid" time="0.004">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook on first render should not return a user when there is no passcode" name="the usePasscodeAuth hook on first render should not return a user when there is no passcode" time="0.004">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook signout function should clear session storage and user on signout" name="the usePasscodeAuth hook signout function should clear session storage and user on signout" time="0.005">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook signin function should set a user when a valid passcode is submitted" name="the usePasscodeAuth hook signin function should set a user when a valid passcode is submitted" time="0.004">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook signin function should return an error when an invalid passcode is submitted" name="the usePasscodeAuth hook signin function should return an error when an invalid passcode is submitted" time="0.004">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook signin function should return an error when an expired passcode is submitted" name="the usePasscodeAuth hook signin function should return an error when an expired passcode is submitted" time="0.003">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook the getToken function should return a token" name="the usePasscodeAuth hook the getToken function should return a token" time="0.004">
+    </testcase>
+    <testcase classname="the usePasscodeAuth hook the getToken function should return a useful error message from the serverless function" name="the usePasscodeAuth hook the getToken function should return a useful error message from the serverless function" time="0.005">
+    </testcase>
+    <testcase classname="the getPasscode function should return the passcode from session storage" name="the getPasscode function should return the passcode from session storage" time="0.001">
+    </testcase>
+    <testcase classname="the getPasscode function should return the passcode from the URL" name="the getPasscode function should return the passcode from the URL" time="0.001">
+    </testcase>
+    <testcase classname="the getPasscode function should return the passcode from the URL when the app code is also sotred in sessionstorage" name="the getPasscode function should return the passcode from the URL when the app code is also sotred in sessionstorage" time="0">
+    </testcase>
+    <testcase classname="the getPasscode function should return null when there is no passcode" name="the getPasscode function should return null when there is no passcode" time="0">
+    </testcase>
+    <testcase classname="the verifyPasscode function should return the correct response when the passcode is valid" name="the verifyPasscode function should return the correct response when the passcode is valid" time="0.001">
+    </testcase>
+    <testcase classname="the verifyPasscode function should return the correct response when the passcode is invalid" name="the verifyPasscode function should return the correct response when the passcode is invalid" time="0.001">
+    </testcase>
+    <testcase classname="the verifyPasscode function should call the API with the correct parameters" name="the verifyPasscode function should call the API with the correct parameters" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useActiveSinkId hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:34" time="0.152" tests="4">
+    <testcase classname="the useActiveSinkId hook should return &quot;default&quot; by default" name="the useActiveSinkId hook should return &quot;default&quot; by default" time="0.003">
+    </testcase>
+    <testcase classname="the useActiveSinkId hook should return the saved device ID when a corresponding device exists" name="the useActiveSinkId hook should return the saved device ID when a corresponding device exists" time="0.002">
+    </testcase>
+    <testcase classname="the useActiveSinkId hook should return &quot;default&quot; when there is a saved device ID but a corresponding device does not exist" name="the useActiveSinkId hook should return &quot;default&quot; when there is a saved device ID but a corresponding device does not exist" time="0.002">
+    </testcase>
+    <testcase classname="the useActiveSinkId hook should save the device ID in localStorage when it is set" name="the useActiveSinkId hook should save the device ID in localStorage when it is set" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the getSingleNetworkCondition function" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:34" time="0.237" tests="7">
+    <testcase classname="the getSingleNetworkCondition function should return NetworkCondition.Green when the provided stat is undefined" name="the getSingleNetworkCondition function should return NetworkCondition.Green when the provided stat is undefined" time="0.001">
+    </testcase>
+    <testcase classname="the getSingleNetworkCondition function should return NetworkCondition.Green when the provided stat is below the Yellow threshold" name="the getSingleNetworkCondition function should return NetworkCondition.Green when the provided stat is below the Yellow threshold" time="0.001">
+    </testcase>
+    <testcase classname="the getSingleNetworkCondition function should return NetworkCondition.Yellow when the provided stat is below the Red thresold and above the Yellow threshold" name="the getSingleNetworkCondition function should return NetworkCondition.Yellow when the provided stat is below the Red thresold and above the Yellow threshold" time="0">
+    </testcase>
+    <testcase classname="the getSingleNetworkCondition function should return NetworkCondition.Red when the provided stat is above the Red threshold" name="the getSingleNetworkCondition function should return NetworkCondition.Red when the provided stat is above the Red threshold" time="0.001">
+    </testcase>
+    <testcase classname="the getNetworkCondition function should return NetworkCondition.Green when all stats in the report are Green" name="the getNetworkCondition function should return NetworkCondition.Green when all stats in the report are Green" time="0.001">
+    </testcase>
+    <testcase classname="the getNetworkCondition function should return NetworkCondition.Yellow when one stat in the report is Yellow" name="the getNetworkCondition function should return NetworkCondition.Yellow when one stat in the report is Yellow" time="0">
+    </testcase>
+    <testcase classname="the getNetworkCondition function should return NetworkCondition.Red when one stat in the report is Red" name="the getNetworkCondition function should return NetworkCondition.Red when one stat in the report is Red" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useScreenShareToggle hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:34" time="0.175" tests="4">
+    <testcase classname="the useScreenShareToggle hook should return a default value of false" name="the useScreenShareToggle hook should return a default value of false" time="0.002">
+    </testcase>
+    <testcase classname="the useScreenShareToggle hook toggle function should call localParticipant.publishTrack with the correct arguments when isSharing is false" name="the useScreenShareToggle hook toggle function should call localParticipant.publishTrack with the correct arguments when isSharing is false" time="0.003">
+    </testcase>
+    <testcase classname="the useScreenShareToggle hook toggle function should correctly stop screen sharing when isSharing is true" name="the useScreenShareToggle hook toggle function should correctly stop screen sharing when isSharing is true" time="0.003">
+    </testcase>
+    <testcase classname="the useScreenShareToggle hook toggle function onended function should correctly stop screen sharing when called" name="the useScreenShareToggle hook toggle function onended function should correctly stop screen sharing when called" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the AudioTrack component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:34" time="0.292" tests="3">
+    <testcase classname="the AudioTrack component should add an audio element to the DOM when the component mounts" name="the AudioTrack component should add an audio element to the DOM when the component mounts" time="0.007">
+    </testcase>
+    <testcase classname="the AudioTrack component should remove the audio element from the DOM when the component unmounts" name="the AudioTrack component should remove the audio element from the DOM when the component unmounts" time="0.004">
+    </testcase>
+    <testcase classname="the AudioTrack component with an activeSinkId should set the sinkId when the component mounts" name="the AudioTrack component with an activeSinkId should set the sinkId when the component mounts" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useDominantSpeaker hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:34" time="0.154" tests="6">
+    <testcase classname="the useDominantSpeaker hook should return room.dominantSpeaker by default" name="the useDominantSpeaker hook should return room.dominantSpeaker by default" time="0.002">
+    </testcase>
+    <testcase classname="the useDominantSpeaker hook should respond to &quot;dominantSpeakerChanged&quot; events" name="the useDominantSpeaker hook should respond to &quot;dominantSpeakerChanged&quot; events" time="0.002">
+    </testcase>
+    <testcase classname="the useDominantSpeaker hook should not set &quot;null&quot; when there is no dominant speaker" name="the useDominantSpeaker hook should not set &quot;null&quot; when there is no dominant speaker" time="0.002">
+    </testcase>
+    <testcase classname="the useDominantSpeaker hook should set &quot;null&quot; as the dominant speaker when the dominant speaker disconnects" name="the useDominantSpeaker hook should set &quot;null&quot; as the dominant speaker when the dominant speaker disconnects" time="0.018">
+    </testcase>
+    <testcase classname="the useDominantSpeaker hook should not set &quot;null&quot; as the dominant speaker when a different participant disconnects" name="the useDominantSpeaker hook should not set &quot;null&quot; as the dominant speaker when a different participant disconnects" time="0.003">
+    </testcase>
+    <testcase classname="the useDominantSpeaker hook should clean up listeners on unmount" name="the useDominantSpeaker hook should clean up listeners on unmount" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useGetPreflightTokens hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:34" time="0.192" tests="3">
+    <testcase classname="the useGetPreflightTokens hook should return two tokens" name="the useGetPreflightTokens hook should return two tokens" time="0.008">
+    </testcase>
+    <testcase classname="the useGetPreflightTokens hook should ignore a rerender that occurs before the tokens have been fetched" name="the useGetPreflightTokens hook should ignore a rerender that occurs before the tokens have been fetched" time="0.005">
+    </testcase>
+    <testcase classname="the useGetPreflightTokens hook should return the tokenError property when there is an error" name="the useGetPreflightTokens hook should return the tokenError property when there is an error" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the LocalVideoPreview component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:35" time="0.214" tests="2">
+    <testcase classname="the LocalVideoPreview component it should render a VideoTrack component when there is a &quot;camera&quot; track" name="the LocalVideoPreview component it should render a VideoTrack component when there is a &quot;camera&quot; track" time="0.008">
+    </testcase>
+    <testcase classname="the LocalVideoPreview component should render the AvatarIcon when there are no &quot;camera&quot; tracks" name="the LocalVideoPreview component should render the AvatarIcon when there are no &quot;camera&quot; tracks" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useHeight hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:35" time="0.15" tests="2">
+    <testcase classname="the useHeight hook should return window.innerHeight" name="the useHeight hook should return window.innerHeight" time="0.006">
+    </testcase>
+    <testcase classname="the useHeight hook should take window.visualViewport.scale into account" name="the useHeight hook should take window.visualViewport.scale into account" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useHandleRoomDisconnectionErrors hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:35" time="0.122" tests="4">
+    <testcase classname="the useHandleRoomDisconnectionErrors hook should do nothing if the room emits a &quot;disconnected&quot; event with no error" name="the useHandleRoomDisconnectionErrors hook should do nothing if the room emits a &quot;disconnected&quot; event with no error" time="0.003">
+    </testcase>
+    <testcase classname="the useHandleRoomDisconnectionErrors hook should react to the rooms &quot;disconnected&quot; event and invoke onError callback if there is an error" name="the useHandleRoomDisconnectionErrors hook should react to the rooms &quot;disconnected&quot; event and invoke onError callback if there is an error" time="0.002">
+    </testcase>
+    <testcase classname="the useHandleRoomDisconnectionErrors hook should tear down old listeners when receiving a new room" name="the useHandleRoomDisconnectionErrors hook should tear down old listeners when receiving a new room" time="0.004">
+    </testcase>
+    <testcase classname="the useHandleRoomDisconnectionErrors hook should clean up listeners on unmount" name="the useHandleRoomDisconnectionErrors hook should clean up listeners on unmount" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useIsTrackSwitchedOff hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:35" time="0.165" tests="5">
+    <testcase classname="the useIsTrackSwitchedOff hook should return false when track is undefined" name="the useIsTrackSwitchedOff hook should return false when track is undefined" time="0.004">
+    </testcase>
+    <testcase classname="the useIsTrackSwitchedOff hook should return mockTrack.isSwitchedOff by default" name="the useIsTrackSwitchedOff hook should return mockTrack.isSwitchedOff by default" time="0.002">
+    </testcase>
+    <testcase classname="the useIsTrackSwitchedOff hook should return respond to &quot;switchedOff&quot; events" name="the useIsTrackSwitchedOff hook should return respond to &quot;switchedOff&quot; events" time="0.003">
+    </testcase>
+    <testcase classname="the useIsTrackSwitchedOff hook should return respond to &quot;switchedOn&quot; events" name="the useIsTrackSwitchedOff hook should return respond to &quot;switchedOn&quot; events" time="0.003">
+    </testcase>
+    <testcase classname="the useIsTrackSwitchedOff hook should clean up listeners on unmount" name="the useIsTrackSwitchedOff hook should clean up listeners on unmount" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the RoomNameScreen component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:34" time="1.332" tests="3">
+    <testcase classname="the RoomNameScreen component should render correctly when there is no logged in user" name="the RoomNameScreen component should render correctly when there is no logged in user" time="0.061">
+    </testcase>
+    <testcase classname="the RoomNameScreen component should render correctly when there is a logged in user" name="the RoomNameScreen component should render correctly when there is a logged in user" time="0.013">
+    </testcase>
+    <testcase classname="the RoomNameScreen component should render correctly when there is a logged in user and &quot;customIdentity=true&quot; query parameter&quot;" name="the RoomNameScreen component should render correctly when there is a logged in user and &quot;customIdentity=true&quot; query parameter&quot;" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="the VideoProvider component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:35" time="0.157" tests="2">
+    <testcase classname="the VideoProvider component should correctly return the Video Context object" name="the VideoProvider component should correctly return the Video Context object" time="0.007">
+    </testcase>
+    <testcase classname="the VideoProvider component should call the onError function when there is an error" name="the VideoProvider component should call the onError function when there is an error" time="0.019">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ToggleAudioButton component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:35" time="0.18" tests="4">
+    <testcase classname="the ToggleAudioButton component should render correctly when audio is enabled" name="the ToggleAudioButton component should render correctly when audio is enabled" time="0.003">
+    </testcase>
+    <testcase classname="the ToggleAudioButton component should render correctly when audio is disabled" name="the ToggleAudioButton component should render correctly when audio is disabled" time="0.001">
+    </testcase>
+    <testcase classname="the ToggleAudioButton component should render correctly when there are no audio tracks" name="the ToggleAudioButton component should render correctly when there are no audio tracks" time="0.001">
+    </testcase>
+    <testcase classname="the ToggleAudioButton component should call the correct toggle function when clicked" name="the ToggleAudioButton component should call the correct toggle function when clicked" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="End Call button" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.228" tests="1">
+    <testcase classname="End Call button should disconnect from the room when clicked" name="End Call button should disconnect from the room when clicked" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the Publication component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.321" tests="6">
+    <testcase classname="the Publication component when track.kind is &quot;video&quot; should render a VideoTrack" name="the Publication component when track.kind is &quot;video&quot; should render a VideoTrack" time="0.008">
+    </testcase>
+    <testcase classname="the Publication component when track.kind is &quot;video&quot; should ignore the &quot;isLocalParticipant&quot; prop when track.name is not &quot;camera&quot;" name="the Publication component when track.kind is &quot;video&quot; should ignore the &quot;isLocalParticipant&quot; prop when track.name is not &quot;camera&quot;" time="0.01">
+    </testcase>
+    <testcase classname="the Publication component when track.kind is &quot;video&quot; should use the &quot;isLocalParticipant&quot; prop when track.name is &quot;camera&quot;" name="the Publication component when track.kind is &quot;video&quot; should use the &quot;isLocalParticipant&quot; prop when track.name is &quot;camera&quot;" time="0.008">
+    </testcase>
+    <testcase classname="the Publication component when track.kind is &quot;audio&quot; should render an AudioTrack" name="the Publication component when track.kind is &quot;audio&quot; should render an AudioTrack" time="0.002">
+    </testcase>
+    <testcase classname="the Publication component when track.kind is &quot;audio&quot; should render null when videoOnly is true" name="the Publication component when track.kind is &quot;audio&quot; should render null when videoOnly is true" time="0.003">
+    </testcase>
+    <testcase classname="the Publication component should render null when there is no track" name="the Publication component should render null when there is no track" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useRoomState hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.195" tests="7">
+    <testcase classname="the useRoomState hook should return &quot;disconnected&quot; by default" name="the useRoomState hook should return &quot;disconnected&quot; by default" time="0.005">
+    </testcase>
+    <testcase classname="the useRoomState hook should return &quot;connected&quot; if the room state is connected" name="the useRoomState hook should return &quot;connected&quot; if the room state is connected" time="0.003">
+    </testcase>
+    <testcase classname="the useRoomState hook should respond to the rooms &quot;reconnecting&quot; event" name="the useRoomState hook should respond to the rooms &quot;reconnecting&quot; event" time="0.003">
+    </testcase>
+    <testcase classname="the useRoomState hook should respond to the rooms &quot;reconnected&quot; event" name="the useRoomState hook should respond to the rooms &quot;reconnected&quot; event" time="0.002">
+    </testcase>
+    <testcase classname="the useRoomState hook should respond to the rooms &quot;disconnected&quot; event" name="the useRoomState hook should respond to the rooms &quot;disconnected&quot; event" time="0.004">
+    </testcase>
+    <testcase classname="the useRoomState hook should update when a new room object is provided" name="the useRoomState hook should update when a new room object is provided" time="0.004">
+    </testcase>
+    <testcase classname="the useRoomState hook tear down old listeners when receiving a new room" name="the useRoomState hook tear down old listeners when receiving a new room" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="the Snackbar component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.234" tests="5">
+    <testcase classname="the Snackbar component should render correctly with &quot;warning&quot; variant" name="the Snackbar component should render correctly with &quot;warning&quot; variant" time="0.002">
+    </testcase>
+    <testcase classname="the Snackbar component should render correctly with &quot;error&quot; variant" name="the Snackbar component should render correctly with &quot;error&quot; variant" time="0.002">
+    </testcase>
+    <testcase classname="the Snackbar component should render correctly with no handleClose function provided" name="the Snackbar component should render correctly with no handleClose function provided" time="0.002">
+    </testcase>
+    <testcase classname="the Snackbar component the handleClose function should be called when the onClose function is called" name="the Snackbar component the handleClose function should be called when the onClose function is called" time="0">
+    </testcase>
+    <testcase classname="the Snackbar component the handleClose function should be called when the onClose function is called with the &quot;clickaway&quot; reason" name="the Snackbar component the handleClose function should be called when the onClose function is called with the &quot;clickaway&quot; reason" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useParticipantIsReconnecting hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.186" tests="4">
+    <testcase classname="the useParticipantIsReconnecting hook should return false by default" name="the useParticipantIsReconnecting hook should return false by default" time="0.005">
+    </testcase>
+    <testcase classname="the useParticipantIsReconnecting hook should return respond to &quot;reconnecting&quot; events" name="the useParticipantIsReconnecting hook should return respond to &quot;reconnecting&quot; events" time="0.003">
+    </testcase>
+    <testcase classname="the useParticipantIsReconnecting hook should return respond to &quot;reconnected&quot; events" name="the useParticipantIsReconnecting hook should return respond to &quot;reconnected&quot; events" time="0.004">
+    </testcase>
+    <testcase classname="the useParticipantIsReconnecting hook should clean up listeners on unmount" name="the useParticipantIsReconnecting hook should clean up listeners on unmount" time="0.017">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useParticipants hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.128" tests="5">
+    <testcase classname="the useParticipants hook should return an array of mockParticipant.tracks by default" name="the useParticipants hook should return an array of mockParticipant.tracks by default" time="0.002">
+    </testcase>
+    <testcase classname="the useParticipants hook should return respond to &quot;participantConnected&quot; events" name="the useParticipants hook should return respond to &quot;participantConnected&quot; events" time="0.003">
+    </testcase>
+    <testcase classname="the useParticipants hook should return respond to &quot;participantDisconnected&quot; events" name="the useParticipants hook should return respond to &quot;participantDisconnected&quot; events" time="0.002">
+    </testcase>
+    <testcase classname="the useParticipants hook should reorder participants when the dominant speaker changes" name="the useParticipants hook should reorder participants when the dominant speaker changes" time="0.004">
+    </testcase>
+    <testcase classname="the useParticipants hook should clean up listeners on unmount" name="the useParticipants hook should clean up listeners on unmount" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useVideoTrackDimensions hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.164" tests="4">
+    <testcase classname="the useVideoTrackDimensions hook should return undefined when track is undefined" name="the useVideoTrackDimensions hook should return undefined when track is undefined" time="0.004">
+    </testcase>
+    <testcase classname="the useVideoTrackDimensions hook should return mockTrack.dimensions" name="the useVideoTrackDimensions hook should return mockTrack.dimensions" time="0.003">
+    </testcase>
+    <testcase classname="the useVideoTrackDimensions hook should respond to &quot;dimensionsChanged&quot; events" name="the useVideoTrackDimensions hook should respond to &quot;dimensionsChanged&quot; events" time="0.004">
+    </testcase>
+    <testcase classname="the useVideoTrackDimensions hook should clean up listeners on unmount" name="the useVideoTrackDimensions hook should clean up listeners on unmount" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the AttachVisibilityHandler component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:36" time="0.588" tests="4">
+    <testcase classname="the AttachVisibilityHandler component when isMobile is false should not add a visibilitychange event handler to the document" name="the AttachVisibilityHandler component when isMobile is false should not add a visibilitychange event handler to the document" time="0.014">
+    </testcase>
+    <testcase classname="the AttachVisibilityHandler component when isMobile is true should add a visibilitychange event handler to the document" name="the AttachVisibilityHandler component when isMobile is true should add a visibilitychange event handler to the document" time="0.002">
+    </testcase>
+    <testcase classname="the AttachVisibilityHandler component when isMobile is true should correctly toggle video when it is already enabled" name="the AttachVisibilityHandler component when isMobile is true should correctly toggle video when it is already enabled" time="0.002">
+    </testcase>
+    <testcase classname="the AttachVisibilityHandler component when isMobile is true should correctly toggle video when it is already disabled" name="the AttachVisibilityHandler component when isMobile is true should correctly toggle video when it is already disabled" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the settingsReducer" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.172" tests="6">
+    <testcase classname="the settingsReducer should set a setting from the name/value pair provided" name="the settingsReducer should set a setting from the name/value pair provided" time="0.001">
+    </testcase>
+    <testcase classname="the settingsReducer should set undefined when the value is &quot;default&quot;" name="the settingsReducer should set undefined when the value is &quot;default&quot;" time="0.001">
+    </testcase>
+    <testcase classname="the settingsReducer should set the maxTracks property to 10 when not using a mobile browser" name="the settingsReducer should set the maxTracks property to 10 when not using a mobile browser" time="0.002">
+    </testcase>
+    <testcase classname="the settingsReducer should set the maxTracks property to 5 when using a mobile browser" name="the settingsReducer should set the maxTracks property to 5 when using a mobile browser" time="0.013">
+    </testcase>
+    <testcase classname="the getResolution function should correctly return a resolution" name="the getResolution function should correctly return a resolution" time="0.001">
+    </testcase>
+    <testcase classname="the getResolution function should return undefined when passed undefined" name="the getResolution function should return undefined when passed undefined" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useMediaStreamTrack hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.129" tests="4">
+    <testcase classname="the useMediaStreamTrack hook should return undefined when track is undefined" name="the useMediaStreamTrack hook should return undefined when track is undefined" time="0.003">
+    </testcase>
+    <testcase classname="the useMediaStreamTrack hook should return mockTrack.mediaStreamTrack by default" name="the useMediaStreamTrack hook should return mockTrack.mediaStreamTrack by default" time="0.002">
+    </testcase>
+    <testcase classname="the useMediaStreamTrack hook should respond to &quot;started&quot; events" name="the useMediaStreamTrack hook should respond to &quot;started&quot; events" time="0.002">
+    </testcase>
+    <testcase classname="the useMediaStreamTrack hook should clean up listeners on unmount" name="the useMediaStreamTrack hook should clean up listeners on unmount" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the removeUndefineds function" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.103" tests="1">
+    <testcase classname="the removeUndefineds function should recursively remove any object keys with a value of undefined" name="the removeUndefineds function should recursively remove any object keys with a value of undefined" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the ProgressIndicator component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.334" tests="1">
+    <testcase classname="the ProgressIndicator component should render correctly" name="the ProgressIndicator component should render correctly" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useLocalAudioToggle hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.181" tests="4">
+    <testcase classname="the useLocalAudioToggle hook should return the value from the useIsTrackEnabled hook" name="the useLocalAudioToggle hook should return the value from the useIsTrackEnabled hook" time="0.004">
+    </testcase>
+    <testcase classname="the useLocalAudioToggle hook toggleAudioEnabled function should call track.disable when track is enabled" name="the useLocalAudioToggle hook toggleAudioEnabled function should call track.disable when track is enabled" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalAudioToggle hook toggleAudioEnabled function should call track.enable when track is disabled" name="the useLocalAudioToggle hook toggleAudioEnabled function should call track.enable when track is disabled" time="0.003">
+    </testcase>
+    <testcase classname="the useLocalAudioToggle hook toggleAudioEnabled function should not throw an error if track is undefined" name="the useLocalAudioToggle hook toggleAudioEnabled function should not throw an error if track is undefined" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useParticipantNetworkQualityLevel hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.169" tests="3">
+    <testcase classname="the useParticipantNetworkQualityLevel hook should return mockParticipant.networkQualityLevel by default" name="the useParticipantNetworkQualityLevel hook should return mockParticipant.networkQualityLevel by default" time="0.004">
+    </testcase>
+    <testcase classname="the useParticipantNetworkQualityLevel hook should return respond to &quot;networkQualityLevelChanged&quot; events" name="the useParticipantNetworkQualityLevel hook should return respond to &quot;networkQualityLevelChanged&quot; events" time="0.004">
+    </testcase>
+    <testcase classname="the useParticipantNetworkQualityLevel hook should clean up listeners on unmount" name="the useParticipantNetworkQualityLevel hook should clean up listeners on unmount" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useVideoContext hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.105" tests="1">
+    <testcase classname="the useVideoContext hook should throw an error if used outside of the VideoProvider" name="the useVideoContext hook should throw an error if used outside of the VideoProvider" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useTrack hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:37" time="0.15" tests="4">
+    <testcase classname="the useTrack hook should return mockPublication.track by default" name="the useTrack hook should return mockPublication.track by default" time="0.003">
+    </testcase>
+    <testcase classname="the useTrack hook should return respond to &quot;subscribed&quot; events" name="the useTrack hook should return respond to &quot;subscribed&quot; events" time="0.004">
+    </testcase>
+    <testcase classname="the useTrack hook should return respond to &quot;unsubscribed&quot; events" name="the useTrack hook should return respond to &quot;unsubscribed&quot; events" time="0.002">
+    </testcase>
+    <testcase classname="the useTrack hook should clean up listeners on unmount" name="the useTrack hook should clean up listeners on unmount" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useHandleonDisconnect hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:38" time="0.116" tests="3">
+    <testcase classname="the useHandleonDisconnect hook should react to the rooms &quot;disconnected&quot; event and invoke onDisconnect callback" name="the useHandleonDisconnect hook should react to the rooms &quot;disconnected&quot; event and invoke onDisconnect callback" time="0.004">
+    </testcase>
+    <testcase classname="the useHandleonDisconnect hook should tear down old listeners when receiving a new room" name="the useHandleonDisconnect hook should tear down old listeners when receiving a new room" time="0.003">
+    </testcase>
+    <testcase classname="the useHandleonDisconnect hook should clean up listeners on unmount" name="the useHandleonDisconnect hook should clean up listeners on unmount" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the NetworkQualityLevel component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:38" time="0.186" tests="3">
+    <testcase classname="the NetworkQualityLevel component should render correctly for level 5" name="the NetworkQualityLevel component should render correctly for level 5" time="0.011">
+    </testcase>
+    <testcase classname="the NetworkQualityLevel component should render correctly for level 3" name="the NetworkQualityLevel component should render correctly for level 3" time="0.003">
+    </testcase>
+    <testcase classname="the NetworkQualityLevel component should render correctly for level 0" name="the NetworkQualityLevel component should render correctly for level 0" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the usePublications hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:38" time="0.175" tests="5">
+    <testcase classname="the usePublications hook should return an array of mockParticipant.tracks by default" name="the usePublications hook should return an array of mockParticipant.tracks by default" time="0.004">
+    </testcase>
+    <testcase classname="the usePublications hook should return respond to &quot;trackPublished&quot; events" name="the usePublications hook should return respond to &quot;trackPublished&quot; events" time="0.005">
+    </testcase>
+    <testcase classname="the usePublications hook should return respond to &quot;trackUnpublished&quot; events" name="the usePublications hook should return respond to &quot;trackUnpublished&quot; events" time="0.003">
+    </testcase>
+    <testcase classname="the usePublications hook should return a new set of tracks if the participant changes" name="the usePublications hook should return a new set of tracks if the participant changes" time="0.007">
+    </testcase>
+    <testcase classname="the usePublications hook should clean up listeners on unmount" name="the usePublications hook should clean up listeners on unmount" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useIsTrackEnabled hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:38" time="0.117" tests="5">
+    <testcase classname="the useIsTrackEnabled hook should return false when track is undefined" name="the useIsTrackEnabled hook should return false when track is undefined" time="0.002">
+    </testcase>
+    <testcase classname="the useIsTrackEnabled hook should return mockTrack.isEnabled by default" name="the useIsTrackEnabled hook should return mockTrack.isEnabled by default" time="0.002">
+    </testcase>
+    <testcase classname="the useIsTrackEnabled hook should respond to &quot;enabled&quot; events" name="the useIsTrackEnabled hook should respond to &quot;enabled&quot; events" time="0.002">
+    </testcase>
+    <testcase classname="the useIsTrackEnabled hook should respond to &quot;disabled&quot; events" name="the useIsTrackEnabled hook should respond to &quot;disabled&quot; events" time="0.002">
+    </testcase>
+    <testcase classname="the useIsTrackEnabled hook should clean up listeners on unmount" name="the useIsTrackEnabled hook should clean up listeners on unmount" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the useHandleTrackPublicationFailed hook" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:38" time="0.124" tests="3">
+    <testcase classname="the useHandleTrackPublicationFailed hook should react to the localParticipant &quot;trackPublicationFailed&quot; event and invoke onError callback" name="the useHandleTrackPublicationFailed hook should react to the localParticipant &quot;trackPublicationFailed&quot; event and invoke onError callback" time="0.002">
+    </testcase>
+    <testcase classname="the useHandleTrackPublicationFailed hook should tear down old listeners when receiving a new room" name="the useHandleTrackPublicationFailed hook should tear down old listeners when receiving a new room" time="0.003">
+    </testcase>
+    <testcase classname="the useHandleTrackPublicationFailed hook should clean up listeners on unmount" name="the useHandleTrackPublicationFailed hook should clean up listeners on unmount" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="the AboutDialog component" errors="0" failures="0" skipped="0" timestamp="2020-11-10T20:45:38" time="4.942" tests="9">
+    <testcase classname="the AboutDialog component should display Video.isSupported" name="the AboutDialog component should display Video.isSupported" time="0.108">
+    </testcase>
+    <testcase classname="the AboutDialog component should display the SDK version" name="the AboutDialog component should display the SDK version" time="0.048">
+    </testcase>
+    <testcase classname="the AboutDialog component should display the package.json version" name="the AboutDialog component should display the package.json version" time="0.041">
+    </testcase>
+    <testcase classname="the AboutDialog component should not display the room type when it is unknown" name="the AboutDialog component should not display the room type when it is unknown" time="0.048">
+    </testcase>
+    <testcase classname="the AboutDialog component should display the room type" name="the AboutDialog component should display the room type" time="0.041">
+    </testcase>
+    <testcase classname="the AboutDialog component when running locally should display N/A as the git tag" name="the AboutDialog component when running locally should display N/A as the git tag" time="0.036">
+    </testcase>
+    <testcase classname="the AboutDialog component when running locally should disaply N/A as the commit hash" name="the AboutDialog component when running locally should disaply N/A as the commit hash" time="0.039">
+    </testcase>
+    <testcase classname="the AboutDialog component when deployed via CircleCI should display the git tag" name="the AboutDialog component when deployed via CircleCI should display the git tag" time="0.043">
+    </testcase>
+    <testcase classname="the AboutDialog component when deployed via CircleCI should display the commit hash" name="the AboutDialog component when deployed via CircleCI should display the commit hash" time="0.047">
+    </testcase>
+  </testsuite>
+</testsuites>
