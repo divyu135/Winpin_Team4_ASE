@@ -11,7 +11,13 @@ import {
   Visibility,
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
+import HomePage from "../Home/HomePage";
+import Event from "../Event/Event";
+import Organization from "../Organization/Organization";
+import Create from "../Create/Create";
+import VideoApp from "../ConferenceRoom/index";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PasscodeEntry from "../ConferenceRoom/PasscodeEntry";
 import "../../style/HomePage.css";
 
 const { MediaContextProvider, Media } = createMedia({
@@ -59,12 +65,15 @@ class DesktopContainer extends Component {
                       Home
                     </Menu.Item>
                   </Link>
-                  <Menu.Item className='navBtn'>Events</Menu.Item>
-                  <Menu.Item className='navBtn'>Organization</Menu.Item>
-                  <Menu.Item className='navBtn'>Create</Menu.Item>
-                  {/* <Link to='/video'>
-                    <Menu.Item className='navBtn'>Virtual Room</Menu.Item>
-                  </Link> */}
+                  <Link to='/event'>
+                    <Menu.Item className='navBtn'>Events</Menu.Item>
+                  </Link>
+                  <Link to='/organization'>
+                    <Menu.Item className='navBtn'>Organization</Menu.Item>
+                  </Link>
+                  <Link to='/create'>
+                    <Menu.Item className='navBtn'>Create</Menu.Item>
+                  </Link>
                   <Link to='/app'>
                     <Menu.Item className='navBtn'>Virtual Room</Menu.Item>
                   </Link>
@@ -74,7 +83,15 @@ class DesktopContainer extends Component {
           </Segment>
         </Visibility>
 
-        {children}
+        <Switch>
+          <Route path='/' exact component={HomePage} />
+          <Route path='/home' component={HomePage} />
+          <Route path='/event' component={Event} />
+          <Route path='/organization' component={Organization} />
+          <Route path='/create' component={Create} />
+          <Route path='/video-app' component={PasscodeEntry} />
+          <Route path='/app' component={VideoApp} />
+        </Switch>
       </Media>
     );
   }
@@ -109,10 +126,15 @@ class MobileContainer extends Component {
             <Link to='/home'>
               <Menu.Item active>Home</Menu.Item>
             </Link>
-            <Menu.Item>Events</Menu.Item>
-            <Menu.Item>Organization</Menu.Item>
-            <Menu.Item>Create</Menu.Item>
-
+            <Link to='/event'>
+              <Menu.Item>Events</Menu.Item>
+            </Link>
+            <Link to='/organization'>
+              <Menu.Item>Organization</Menu.Item>
+            </Link>
+            <Link to='/create'>
+              <Menu.Item>Create</Menu.Item>
+            </Link>
             <Link to='/app'>
               <Menu.Item>Virtual Room</Menu.Item>
             </Link>
@@ -141,10 +163,19 @@ class MobileContainer extends Component {
                     <h1 className='ProjNameMobile'>Winpin</h1>
                   </span>
                 </Menu>
+                {/* {children} */}
+                {/* <HomePage></HomePagxe> */}
+                <Switch>
+                  <Route path='/' exact component={HomePage} />
+                  <Route path='/home' component={HomePage} />
+                  <Route path='/event' component={Event} />
+                  <Route path='/organization' component={Organization} />
+                  <Route path='/create' component={Create} />
+                  <Route path='/video-app' component={PasscodeEntry} />
+                  <Route path='/app' component={VideoApp} />
+                </Switch>
               </Container>
             </Segment>
-
-            {children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Media>

@@ -17,15 +17,13 @@ import {
   // Image,
   // List,
   // Menu,
-  Segment
+  Segment,
 } from "semantic-ui-react";
 import "../../style/HomePage.css";
 import Footer from "../Layout/Footer";
 import event2 from "./event2.png";
 import event3 from "./event3.jpg";
 import event4 from "./event4.jpg";
-
-
 
 class HomePage extends Component {
   state = {};
