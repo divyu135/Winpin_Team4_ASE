@@ -35,7 +35,7 @@ class HomePage extends Component {
     return (
       <div>
         {/* <Navigation></Navigation> */}
-        <Segment style={{ padding: "3em 0em" }} vertical>
+        <Segment vertical>
           <Slide easing='ease' {...this.fadePropertiess}>
             <div className='each-slide'>
               <div style={{ backgroundImage: `url(${event2})` }}></div>

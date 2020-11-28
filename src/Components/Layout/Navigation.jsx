@@ -15,9 +15,11 @@ import HomePage from "../Home/HomePage";
 import Event from "../Event/Event";
 import Organization from "../Organization/Organization";
 import Create from "../Create/Create";
-import VideoApp from "../ConferenceRoom/index";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import PasscodeEntry from "../ConferenceRoom/PasscodeEntry";
+// import VideoApp from "../ConferenceRoom/index";
+// import VirtualRoom from '../ConferenceRoom/VirtualRoom'
+import { Switch, Route } from "react-router-dom";
+// import PasscodeEntry from "../ConferenceRoom/PasscodeEntry";
+
 import "../../style/HomePage.css";
 
 const { MediaContextProvider, Media } = createMedia({
@@ -35,7 +37,19 @@ class DesktopContainer extends Component {
   showFixedMenu = () => this.setState({ fixed: true });
 
   render() {
-    const { children } = this.props;
+    const children  = <div style={{ marginTop: "3em" }}>
+                        <Switch>
+                          <Route path='/' exact component={HomePage} />
+                          <Route path='/home' component={HomePage} />
+                          <Route path='/event' component={Event} />
+                          <Route path='/organization' component={Organization} />
+                          <Route path='/create' component={Create} />
+                          {/* <Route path='/virtual-room' component={VirtualRoom} /> */}
+                          {/* <Route path='/video-app' component={PasscodeEntry} /> */}
+                          {/* <Route path='/app' component={VideoApp} /> */}
+                          <Route exact path="/virtual-room" render={() => (window.location = "https://video-app-3770-9325-dev.twil.io")} />
+                        </Switch>
+                      </div>
     // const { fixed } = this.state;
 
     return (
@@ -74,16 +88,17 @@ class DesktopContainer extends Component {
                   <Link to='/create'>
                     <Menu.Item className='navBtn'>Create</Menu.Item>
                   </Link>
-                  <Link to='/app'>
+                  <Link to='/virtual-room'>
                     <Menu.Item className='navBtn'>Virtual Room</Menu.Item>
                   </Link>
                 </Menu.Item>
               </Container>
             </Menu>
+            {children}
           </Segment>
         </Visibility>
-
-        <Switch>
+                  
+        {/* <Switch>
           <Route path='/' exact component={HomePage} />
           <Route path='/home' component={HomePage} />
           <Route path='/event' component={Event} />
@@ -91,7 +106,7 @@ class DesktopContainer extends Component {
           <Route path='/create' component={Create} />
           <Route path='/video-app' component={PasscodeEntry} />
           <Route path='/app' component={VideoApp} />
-        </Switch>
+        </Switch> */}
       </Media>
     );
   }
@@ -135,7 +150,7 @@ class MobileContainer extends Component {
             <Link to='/create'>
               <Menu.Item>Create</Menu.Item>
             </Link>
-            <Link to='/app'>
+            <Link to='/virtual-room'>
               <Menu.Item>Virtual Room</Menu.Item>
             </Link>
           </Sidebar>
@@ -163,17 +178,9 @@ class MobileContainer extends Component {
                     <h1 className='ProjNameMobile'>Winpin</h1>
                   </span>
                 </Menu>
-                {/* {children} */}
+                {children}
                 {/* <HomePage></HomePagxe> */}
-                <Switch>
-                  <Route path='/' exact component={HomePage} />
-                  <Route path='/home' component={HomePage} />
-                  <Route path='/event' component={Event} />
-                  <Route path='/organization' component={Organization} />
-                  <Route path='/create' component={Create} />
-                  <Route path='/video-app' component={PasscodeEntry} />
-                  <Route path='/app' component={VideoApp} />
-                </Switch>
+                
               </Container>
             </Segment>
           </Sidebar.Pusher>
