@@ -45,7 +45,7 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment textAlign='center' style={{ padding: "1em 0em" }} vertical>
+          <Segment textAlign='center' style={{ padding: "3em 0em" }} vertical>
             <Menu fixed='top' size='large'>
               <Container>
                 <span position='left'>
