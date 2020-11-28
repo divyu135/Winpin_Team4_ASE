@@ -11,7 +11,7 @@ class Event extends Component {
     this.state = { data: [] };
   }
   callAPI() {
-    fetch("http://localhost:9000/event/test")
+    fetch("/event_list")
       .then((resp) => {
         return resp.json();
       })
