@@ -63,7 +63,7 @@ const app = express()
 
 //setting up database routes
 
-const listSysTables = require('./database/routes/hello-route');
+const listSysTablesRoute = require('./database/routes/listSysTables');
 
 
 app.set('views', path.join(__dirname, 'database','views'));
@@ -86,7 +86,7 @@ if ( hasConnect == false ) {
 var connString = "DRIVER={DB2};DATABASE=" + db2.db + ";UID=" + db2.username + ";PWD=" + db2.password + ";HOSTNAME=" + db2.hostname + ";port=" + db2.port;
 
 //making connection
-app.get('/db2', listSysTables(ibmdb,connString));
+app.get('/db2', listSysTablesRoute.listSysTables(ibmdb,connString));
 
 
 // serve the react app files
