@@ -39,6 +39,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "ibm-cloud-env": "^0",
+    "ibm_db": "^2.7.1",
+    "jade": "^1.11.0",
     "swagger-ui-express": "^4.1.4"
   },
   "devDependencies": {
