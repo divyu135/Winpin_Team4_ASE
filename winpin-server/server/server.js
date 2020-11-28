@@ -16,7 +16,7 @@
 // const app = express();
 
 // app.use(cors);
-// 
+//
 // // enable parsing of http request body
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
@@ -52,51 +52,64 @@
 // const express = require('express')
 // var routes = require('./database/routes');
 
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var ibmdb = require('ibm_db');
+var express = require("express");
+var http = require("http");
+var path = require("path");
+var ibmdb = require("ibm_db");
 
-const app = express()
+const app = express();
 
 // connecting to IBM DB2 database
 
 //setting up database routes
 
-const listSysTables = require('./database/routes/hello-route');
+const listSysTables = require("./database/routes/listSysTables");
 
-
-app.set('views', path.join(__dirname, 'database','views'));
-app.set('view engine', 'jade');
+app.set("views", path.join(__dirname, "database", "views"));
+app.set("view engine", "jade");
 
 var db2;
 var hasConnect = false;
 
-if ( hasConnect == false ) {
-
-   db2 = {
-        db: "BLUDB",
-        hostname: "dashdb-txn-sbox-yp-lon02-06.services.eu-gb.bluemix.net",
-        port: 50000,
-        username: "ssg47540",
-        password: "c4plzs7h2kpjt0@2"
-     };
+if (hasConnect == false) {
+  db2 = {
+    db: "BLUDB",
+    hostname: "dashdb-txn-sbox-yp-lon02-06.services.eu-gb.bluemix.net",
+    port: 50000,
+    username: "ssg47540",
+    password: "c4plzs7h2kpjt0@2",
+  };
 }
 
-var connString = "DRIVER={DB2};DATABASE=" + db2.db + ";UID=" + db2.username + ";PWD=" + db2.password + ";HOSTNAME=" + db2.hostname + ";port=" + db2.port;
+var connString =
+  "DRIVER={DB2};DATABASE=" +
+  db2.db +
+  ";UID=" +
+  db2.username +
+  ";PWD=" +
+  db2.password +
+  ";HOSTNAME=" +
+  db2.hostname +
+  ";port=" +
+  db2.port;
 
 //making connection
-app.get('/db2', listSysTables(ibmdb,connString));
-
+app.get("/db2", listSysTables.listSysTables(ibmdb, connString));
 
 // serve the react app files
 // console.log(path.join(__dirname, '../winpin'));
-app.use(express.static(path.join(__dirname, '../winpin-ui')));
-app.get('/api/hello', function(req,res) {
-	res.json({message:"Hello World"});
-})
+app.use(express.static(path.join(__dirname, "../winpin-ui")));
+app.get("/api/hello", function (req, res) {
+  res.json({ message: "Hello World" });
+});
+
+// Handling api calls from winpin client
+const eventListRoutes = require("./routes/event-route");
+
+// Handling events
+app.use("/event_list", eventListRoutes);
 
 const port = process.env.PORT || 3000;
-app.listen(port, function() {
-	console.log('server listening on port ' + port)
-})
+app.listen(port, function () {
+  console.log("server listening on port " + port);
+});

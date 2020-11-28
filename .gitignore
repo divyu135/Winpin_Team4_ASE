@@ -10,6 +10,7 @@
 
 # production
 /build
+winpin-server/winpin-ui
 
 # misc
 .DS_Store
