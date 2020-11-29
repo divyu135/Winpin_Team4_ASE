@@ -59,16 +59,16 @@ class Event extends Component {
                 <Grid.Column>
                   <Grid.Row>
                     <Grid.Column>
-                      <div class='ui cards'>
-                        <div class='card'>
-                          <div class='content'>
-                            <div class='header'>EventName</div>
-                            <div class='description'>
+                      <div className='ui cards'>
+                        <div className='card'>
+                          <div className='content'>
+                            <div className='header'>EventName</div>
+                            <div className='description'>
                               Event Description with Date and Time
                             </div>
                           </div>
-                          <div class='ui bottom attached button'>
-                            <i class='add icon'></i>
+                          <div className='ui bottom attached button'>
+                            <i className='add icon'></i>
                             Join Room
                           </div>
                         </div>

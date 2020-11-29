@@ -183,3 +183,8 @@
 .confirmLabel {
   color: black !important;
 }
+
+.message {
+  color: red !important;
+  font-size: 11px !important;
+}
