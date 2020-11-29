@@ -5,8 +5,11 @@ An online UWindsor events platform where you can participate in events as well a
 ## Vision
 The goal of this project is to design an Event Management portal “Winpin”, that allows users to participate in events and create engaging virtual events. The event portal will allow users to keep track of the different events, the schedule, the organizers and the overview of the events. The Organizers should be able to login to the system as an administrator to add and modify the events and view/edit participant list.
 
-## Doc Resources
+## System Architecture
+### ER Diagram
+![ER Diagrams](./images/ERdiag.svg "Database ER Diagram") 
 
+## Doc Resources
 Following are the documents related to Winpin project.
 
 ## Inception Report
@@ -24,6 +27,15 @@ For more details go to [Elaboration Report - Phase 1](./Elaboration%20Report%20-
 #### Wireframe: 
 [UI design](./Page%20UI.pptx)
 
+#### Events: 
+![Screen Capture](./images/Event%20Page.gif "GIF") 
+
+#### Organization: 
+![Screen Capture](./images/Organization.gif "GIF") 
+
+#### Create Events/Organizations: 
+![Screen Capture](./images/CreateForms.gif "GIF") 
+
 #### Virtual Room:
 ![Virtual Room on Desktop](./images/web1.png "Virtual Room on Desktop") 
 <!--![Virtual Room on Mobile](./images/mobile1.png "Virtual Room on Mobile") -->
@@ -31,7 +43,15 @@ For more details go to [Elaboration Report - Phase 1](./Elaboration%20Report%20-
 ## Task List
 ![Task Reports](./images/Task%20Report.svg "Task Report")
 ## Test Cases
-## ER Diagram
-![ER Diagrams](./images/ERdiag.svg "Database ER Diagram") 
+#### Unit Testing using Jest: 
+![Screen Capture](./images/test2.gif "GIF") 
+
+![Screen Capture](./images/test3.gif "GIF") 
+
+#### E2E Testing using Cypress: 
+![Screen Capture](./images/cypress1.gif "GIF") 
+
+![Screen Capture](./images/cypress2.gif "GIF") 
+
 
 
