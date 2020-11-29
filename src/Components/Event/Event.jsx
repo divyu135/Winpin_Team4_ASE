@@ -3,12 +3,15 @@ import { Segment, Image, Tab, Grid, List } from "semantic-ui-react";
 import { runInContext } from "vm";
 import "../../style/HomePage.css";
 import Footer from "../Layout/Footer";
+import DisplayList from "./DisplayList";
 
 class Event extends Component {
   state = {};
+  events = [];
   constructor(props) {
     super(props);
     this.state = { data: [] };
+    this.events = [];
   }
   callAPI() {
     fetch("/event_list")
@@ -22,8 +25,21 @@ class Event extends Component {
       });
   }
 
+  callEventsDB() {
+    fetch("/events-db")
+      .then((resp) => {
+        return resp.json()
+      })
+      .then((data) => {
+        this.events =data;
+        console.log(this.events)
+
+      });
+  }
+
   componentWillMount() {
     this.callAPI();
+    this.callEventsDB();
   }
 
   render() {
@@ -36,7 +52,8 @@ class Event extends Component {
 
         <Segment>
           <h3 className='tabHeader'>Scheduled Events</h3>
-          <Segment>
+          <DisplayList events= {this.events} ></DisplayList>
+          {/* <Segment>
             <Segment>
               <Grid columns='three' divided>
                 <Grid.Column>
@@ -62,7 +79,7 @@ class Event extends Component {
                 <Grid.Row></Grid.Row>
               </Grid>
             </Segment>
-          </Segment>
+          </Segment> */}
           <h3 className='tabHeader'>Events</h3>
           <Segment>
             <Segment>

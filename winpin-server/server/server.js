@@ -63,7 +63,6 @@ const app = express();
 
 //setting up database routes
 
-const listSysTables = require("./database/routes/listSysTables");
 
 app.set("views", path.join(__dirname, "database", "views"));
 app.set("view engine", "jade");
@@ -93,8 +92,17 @@ var connString =
   ";port=" +
   db2.port;
 
+// DATABASE
+
+//declaring routes
+const listSysTables = require("./database/routes/listSysTables");
+const eventsRoute = require("./database/routes/getEvents");
+const orgsRoute = require("./database/routes/getOrgs");
+
 //making connection
 app.get("/db2", listSysTables.listSysTables(ibmdb, connString));
+app.get("/events-db", eventsRoute.getEventsDB(ibmdb,connString));
+app.get("/orgs-db", orgsRoute.getOrgDB(ibmdb,connString));
 
 // serve the react app files
 // console.log(path.join(__dirname, '../winpin'));
