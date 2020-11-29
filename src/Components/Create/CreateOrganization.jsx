@@ -1,24 +1,18 @@
 import React, { Component } from "react";
-import organization from "../Organization/organization.jpg";
 import TextareaAutosize from "react-textarea-autosize";
 import {
   Segment,
-  Image,
-  Tab,
   Grid,
-  List,
   Form,
   Label,
   Input,
   Button,
   Modal,
   Checkbox,
-  Header,
 } from "semantic-ui-react";
-import { FormGroup } from "@material-ui/core";
 import "../../style/HomePage.css";
 
-function ModalExampleModal() {
+const ModalExampleModal = (props) => {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -59,40 +53,63 @@ function ModalExampleModal() {
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
-        <Button
+        {/* <Button
           contact='Cancle'
           onClick={() => {
             setOpen(false);
+            // whenClick = {this.statee.submitEnabled = false}
           }}
         >
           Cancle
-        </Button>
+        </Button> */}
         <Button
           content='Confirm'
           labelPosition='right'
           icon='checkmark'
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+            props.mm(true);
+          }}
           positive
         />
       </Modal.Actions>
     </Modal>
   );
+};
+function handleconfirm() {
+  var ss;
+  ss = true;
+  submitEnabled = true;
+  console.log(ss);
+  console.log("lkadfljasdl " + submitEnabled);
 }
 
 var confirmData = {};
+var submitEnabled = false;
 
 class CreateOrganization extends Component {
   state = {};
+  // sub = false;
   constructor(props) {
     super(props);
+    // this.sub = false;
     this.state = {
       description: "",
       name: "",
       email: "",
       contact: "",
-      message: "",
+      messageConfirm:
+        "Please add all required details before you confirm the details",
+      confirmCreate: false,
+      submitEnable: false,
     };
   }
+  setterSubmit = (val) => {
+    console.log("inside setSubl=mit " + val);
+    this.setState({
+      submitEnable: val,
+    });
+  };
   handleNameChange = (event) => {
     this.setState({
       name: event.target.value,
@@ -129,26 +146,31 @@ class CreateOrganization extends Component {
     if (checked) {
       this.state.confirmCreate = true;
       confirmData = this.state;
+    } else {
+      this.state.confirmCreate = false;
+      this.setState({
+        submitEnable: false,
+      });
     }
-    // this.log("Change", checked);
   };
   handleSubmit = (event) => {
-    // this.state;
     event.preventDefault();
   };
 
   onSubmitOrg = () => {
     var orgInfo = {
-      orgName: this.refs.orgName.value,
+      orgName: this.state.name,
+      orgDescription: this.state.description,
+      email: this.state.email,
+      contact: this.state.contact,
     };
 
-    console.log(orgInfo);
-
-    fetch("http://localhost:9000/create/organization", {
+    const requestOptions = {
       method: "POST",
-      headers: { "Content-type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(orgInfo),
-    })
+    };
+    fetch("/org", requestOptions)
       .then((resp) => resp.json())
       .then((result) => {
         if (result) {
@@ -160,23 +182,31 @@ class CreateOrganization extends Component {
   };
 
   render() {
+    const enableCheck =
+      this.state.name.length > 0 &&
+      this.state.description.length > 0 &&
+      this.state.email.length > 0 &&
+      this.state.contact.length > 0;
+    // const enabled = this.state.confirmCreate === true;
+
     return (
       <div>
         <h1 className='tabHeaderCreate'>Create your own Organization</h1>
 
         <Segment>
-          <Form onSubmit={this.handleSubmit}>
+          <Form>
             <Grid>
               <Grid.Column width={8}>
                 <Segment>
                   <Grid.Row className='gridPaddingCreate'>
                     <Label className='label'>Name of Organization</Label>
                     <Input
-                      ref='orgName'
+                      id='name'
                       required={true}
                       className='inputStyle'
                       placeholder='Please Enter Name of Organization'
                       type='text'
+                      disabled={this.state.confirmCreate}
                       value={this.state.name}
                       onChange={this.handleNameChange}
                     ></Input>
@@ -189,6 +219,7 @@ class CreateOrganization extends Component {
                       placeholder='Please Enter email address'
                       type='Email'
                       value={this.state.email}
+                      disabled={this.state.confirmCreate}
                       onChange={this.handleEmailChange}
                     ></Input>
                   </Grid.Row>
@@ -200,6 +231,7 @@ class CreateOrganization extends Component {
                       placeholder='Please Enter your contact Number'
                       type='Number'
                       value={this.state.contact}
+                      disabled={this.state.confirmCreate}
                       onChange={this.handleContactChange}
                     ></Input>
                   </Grid.Row>
@@ -213,6 +245,7 @@ class CreateOrganization extends Component {
                     <TextareaAutosize
                       required={true}
                       value={this.state.description}
+                      disabled={this.state.confirmCreate}
                       onChange={this.handleDescriptionChange}
                       placeholder='Enter brif idea regarding your event'
                       onHeightChange={(height, instance) =>
@@ -227,29 +260,41 @@ class CreateOrganization extends Component {
                   {/* <span>
                     <ModalExampleModal></ModalExampleModal>
                   </span> */}
+                  {enableCheck === false ? (
+                    <p className='message'> {this.state.messageConfirm}</p>
+                  ) : null}
                   <Checkbox
                     onChange={this.handleChange}
                     onClick={this.handleClick}
                     label='Please confirm your details  '
+                    disabled={!enableCheck}
                   ></Checkbox>
                   {this.state.confirmCreate == true ? (
                     <span className='showDetailsbtn'>
-                      <ModalExampleModal></ModalExampleModal>
+                      <ModalExampleModal
+                        mm={this.setterSubmit}
+                      ></ModalExampleModal>
                     </span>
                   ) : null}
                 </Grid.Row>
                 <Grid.Row className='gridPaddingCreate'>
+                  {console
+                    .log
+                    // this.state.confirmCreate + " state " + submitEnabled
+                    ()}
+                  {/* <Button onClick={handleconfirm}>{submitEnabled}</Button> */}
                   <Button
                     className='submitbtn'
                     type='submit'
+                    disabled={!this.state.submitEnable}
                     onClick={this.onSubmitOrg}
                   >
                     Submit
                   </Button>
-                  <Button type='reset'>Reset</Button>
+                  {/* <Button type='reset'>Reset</Button> */}
                 </Grid.Row>
                 <Grid.Row className='gridPaddingCreate'>
-                  <p>{this.state.message}</p>
+                  <p className='message'>{this.state.message}</p>
                 </Grid.Row>
               </span>
             </Grid>

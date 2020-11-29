@@ -98,7 +98,7 @@
       "pre-commit": "lint-staged"
     }
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:3001",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"

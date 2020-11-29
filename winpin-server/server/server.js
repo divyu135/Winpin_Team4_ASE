@@ -1,7 +1,7 @@
 // // import dependencies and initialize express
 // const express = require('express');
 // const path = require('path');
-// const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 // const cors = require('cors');
 
 // // var corsOptions = {
@@ -18,7 +18,7 @@
 // app.use(cors);
 //
 // // enable parsing of http request body
-// app.use(bodyParser.urlencoded({ extended: false }));
+
 // app.use(bodyParser.json());
 
 // // routes and api calls
@@ -96,20 +96,27 @@ var connString =
 //making connection
 app.get("/db2", listSysTables.listSysTables(ibmdb, connString));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 // serve the react app files
 // console.log(path.join(__dirname, '../winpin'));
 app.use(express.static(path.join(__dirname, "../winpin-ui")));
-app.get("/api/hello", function (req, res) {
-  res.json({ message: "Hello World" });
-});
+// app.post("/org", function (req, res) {
+//   console.log(req.body);
+// });
 
 // Handling api calls from winpin client
 const eventListRoutes = require("./routes/event-route");
+const eventInfoRoutes = require("./routes/eventInfo-route");
+const orgRoutes = require("./routes/org-route");
 
 // Handling events
 app.use("/event_list", eventListRoutes);
+app.use("/eventInfo", eventInfoRoutes);
+app.use("/org", orgRoutes);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(port, function () {
   console.log("server listening on port " + port);
 });
