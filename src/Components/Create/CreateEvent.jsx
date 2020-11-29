@@ -133,7 +133,7 @@ class CreateEvent extends Component {
   }
   minDate = new Date();
   setterSubmit = (val) => {
-    console.log("inside setSubl=mit " + val);
+    // console.log("inside setSubl=mit " + val);
     this.setState({
       submitEnable: val,
     });
@@ -172,6 +172,8 @@ class CreateEvent extends Component {
     this.setState({
       datetime: event.target.value,
     });
+    // console.log(this.state.datetime);
+    
     this.passDataToConfirm();
   };
   handleParticipantsChange = (event) => {
@@ -208,14 +210,14 @@ class CreateEvent extends Component {
     }
     // this.log("Change", checked);
   };
-  handleSubmit = (event) => {
+  handleSubmit = (event) => {                                                                                                                                                  
     var eventInfo = {
       eventName: this.state.eventName,
       eventDescription: this.state.description,
       participants: this.state.participants,
       date: this.state.datetime,
       passcode: this.state.passcode,
-      name: this.state.name,
+      name: this.state.createrName,
       email: this.state.email,
       contact: this.state.contact,
     };
@@ -225,7 +227,7 @@ class CreateEvent extends Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(eventInfo),
     };
-    fetch("/eventInfo", requestOptions)
+    fetch("/insert-event-db", requestOptions)
       .then((resp) => resp.json())
       .then((result) => {
         if (result) {

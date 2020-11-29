@@ -8,16 +8,17 @@ const DisplayList = props => {
                 <Grid columns='three' divided>
                         {
                             props.events.map(item =>
-                                    <div class='ui cards' style={{margin:5}}>
-                                    <div class='card'>
-                                        <div class='content'>
-                                            <div class='header'>{item.EVENT_NAME}</div>
-                                            <div class='description'>
+                                    <div className='ui cards' style={{margin:5}}>
+                                    <div className='card'>
+                                        <div className='content'>
+                                            <div className='header'>{item.EVENT_NAME}</div>
+                                            <div className='meta'>{item.EVENT_DATE}</div>
+                                            <div className='description'>
                                                 {item.EVENT_DESCRIPTION}
                                             </div>
                                         </div>
-                                        <div class='ui bottom attached button'>
-                                            <i class='add icon'></i>
+                                        <div className='ui bottom attached button'>
+                                            <i className='add icon'></i>
                                             Join Room
                                         </div>
                                     </div>

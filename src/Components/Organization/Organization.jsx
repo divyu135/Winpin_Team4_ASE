@@ -1,6 +1,7 @@
 import { FormatAlignCenter } from "@material-ui/icons";
 import React, { Component } from "react";
 import TextareaAutosize from "react-textarea-autosize";
+import Footer from "../Layout/Footer";
 import {
   Segment,
   Image,
@@ -17,7 +18,6 @@ import {
   Accordion,
 } from "semantic-ui-react";
 import "../../style/HomePage.css";
-import DisplayOrgList from "./DisplayOrgList";
 import organization from "../Organization/organization.jpg";
 
 class Organization extends Component {
@@ -31,6 +31,7 @@ class Organization extends Component {
       contact: "",
       message: "",
       activeIndex: 0,
+      submitted: false,
     };
   }
   handleNameChange = (event) => {
@@ -55,7 +56,10 @@ class Organization extends Component {
       email: this.state.email,
       contact: this.state.contact,
     };
-    event.preventDefault();
+
+    this.setState({
+      submitted: true,
+    });
   };
 
   handleClick = (e, titleProps) => {
@@ -80,13 +84,14 @@ class Organization extends Component {
                 <Accordion>
                   <Accordion.Title>
                     <div>
-                      <h3>Organization Name</h3>
+                      <h3>Graduate Student Organization</h3>
                       <Label>
-                        here is the description of the Organizationhere is the
-                        description of the Organizationhere is the description
-                        of the Organizationhere is the description of the
-                        Organizationhere is the description of the
-                        Organizationhere is the description of the Organizations
+                        The Graduate Student organization is the independent
+                        voice of graduate students on campus. It helps you with
+                        supporting you in your studies and if you are facing
+                        academic problems, providing recreational, social and
+                        sporting events, representing all graduate students to
+                        the University, the Government and the public.
                       </Label>
                       <div>
                         <Button
@@ -146,7 +151,15 @@ class Organization extends Component {
                           >
                             Submit
                           </Button>
-                          <Button type='reset'>Reset</Button>
+                          {/* <Button type='reset'>Reset</Button> */}
+                          <br></br>
+                          {this.state.submitted ? (
+                            <p className='message'>
+                              Thank you for enrolling into the organization. You
+                              will receive further details by that organization
+                            </p>
+                          ) : null}
+
                           <Grid.Row className='gridPaddingCreate'>
                             <p>{this.state.message}</p>
                           </Grid.Row>
@@ -163,13 +176,13 @@ class Organization extends Component {
                 <Accordion>
                   <Accordion.Title>
                     <div>
-                      <h3>Organization Name</h3>
+                      <h3>Sports Centre</h3>
                       <Label>
-                        here is the description of the Organizationhere is the
-                        description of the Organizationhere is the description
-                        of the Organizationhere is the description of the
-                        Organizationhere is the description of the
-                        Organizationhere is the description of the Organizations
+                        The sports industry is incredibly competitive, with a
+                        high barrier to entry and an even steeper climb to the
+                        top. This organization help you to be aware regarding
+                        this. The organizations that made the list are as
+                        different and varied as the industry they represent.
                       </Label>
                       <div>
                         <Button
@@ -242,6 +255,7 @@ class Organization extends Component {
             </Grid.Row>
           </Grid>
         </Segment>
+        <Footer></Footer>
         {/* <h1>{this.state.apiresponse}</h1> */}
       </div>
     );

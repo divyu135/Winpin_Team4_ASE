@@ -92,17 +92,22 @@ var connString =
   ";port=" +
   db2.port;
 
-// DATABASE
-
-//declaring routes
+// Test systables
 const listSysTables = require("./database/routes/listSysTables");
+// Select data from tables
 const eventsRoute = require("./database/routes/getEvents");
 const orgsRoute = require("./database/routes/getOrgs");
+// Insert data to tables
+const eventInsertRoutes = require("./routes/eventInfo-route");
+const orgInsertRoutes = require("./routes/eventInfo-route");
+
 
 //making connection
 app.get("/db2", listSysTables.listSysTables(ibmdb, connString));
 app.get("/events-db", eventsRoute.getEventsDB(ibmdb,connString));
 app.get("/orgs-db", orgsRoute.getOrgDB(ibmdb,connString));
+// app.use("/insert-event-db", eventInsertRoutes);
+app.use("/insert-org-db", orgInsertRoutes);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -110,21 +115,45 @@ app.use(bodyParser.json());
 // serve the react app files
 // console.log(path.join(__dirname, '../winpin'));
 app.use(express.static(path.join(__dirname, "../winpin-ui")));
-// app.post("/org", function (req, res) {
-//   console.log(req.body);
-// });
+
 
 // Handling api calls from winpin client
 const eventListRoutes = require("./routes/event-route");
-const eventInfoRoutes = require("./routes/eventInfo-route");
 const orgRoutes = require("./routes/org-route");
+const eventInfoRoutes = require("./routes/eventInfo-route");
 
-// Handling events
+// Handling scrapping events
 app.use("/event_list", eventListRoutes);
-app.use("/eventInfo", eventInfoRoutes);
-app.use("/org", orgRoutes);
+app.use("/insert-event-db", eventInfoRoutes);
 
 const port = process.env.PORT || 3001;
 app.listen(port, function () {
   console.log("server listening on port " + port);
+  console.log("Open http://localhost:"+ port)
 });
+
+const AccessToken = require('twilio').jwt.AccessToken;
+const VideoGrant = AccessToken.VideoGrant;
+require('dotenv').config();
+
+const MAX_ALLOWED_SESSION_DURATION = 14400;
+const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
+const twilioApiKeySID = process.env.TWILIO_API_KEY_SID;
+const twilioApiKeySecret = process.env.TWILIO_API_KEY_SECRET;
+
+app.get('/token', (req, res) => {
+  const { identity, roomName } = req.query;
+  const token = new AccessToken(twilioAccountSid, twilioApiKeySID, twilioApiKeySecret, {
+    ttl: MAX_ALLOWED_SESSION_DURATION,
+  });
+  token.identity = identity;
+  const videoGrant = new VideoGrant({ room: roomName });
+  token.addGrant(videoGrant);
+  res.send(token.toJwt());
+  console.log(`issued token for ${identity} in room ${roomName}`);
+});
+
+app.get('/token/password', function(req, res) {
+  res.send('test');
+});
+
