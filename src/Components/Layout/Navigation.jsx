@@ -89,8 +89,8 @@ class DesktopContainer extends Component {
           <Route path='/event' component={Event} />
           <Route path='/organization' component={Organization} />
           <Route path='/create' component={Create} />
-          <Route path='/video-app' component={PasscodeEntry} />
-          <Route path='/app' component={VideoApp} />
+          {/* <Route path='/video-app' component={PasscodeEntry} /> */}
+          <Route exact path="/app" render={() => (window.location = "https://video-app-3770-9325-dev.twil.io")} />
         </Switch>
       </Media>
     );

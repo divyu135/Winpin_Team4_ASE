@@ -1,6 +1,5 @@
 node_modules
 node_modules_linux
-winpin-ui
 coverage
 server/localdev-config.json
 server/localdev-config.json

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Segment, Image, Tab, Grid, List } from "semantic-ui-react";
+import PasscodeModal from './PasscodeModal';
 
 const DisplayList = props => {
     return (
@@ -17,10 +18,7 @@ const DisplayList = props => {
                                                 {item.EVENT_DESCRIPTION}
                                             </div>
                                         </div>
-                                        <div className='ui bottom attached button'>
-                                            <i className='add icon'></i>
-                                            Join Room
-                                        </div>
+                                        <PasscodeModal name={item.EVENT_NAME} passcode={item.EVENT_PASSCODE}/>
                                     </div>
                                     </div>
                             )
