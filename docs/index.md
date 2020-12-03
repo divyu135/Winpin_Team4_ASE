@@ -68,7 +68,7 @@ For more details go to [Elaboration Report - Phase 1](./Elaboration%20Report%20-
 
 
 ## Task List
-![Task Reports](./images/Task%20Report.svg "Task Report")
+![Task List](./images/Task%20List.pdf "Task List")
 
 
 ## User Interface Design
