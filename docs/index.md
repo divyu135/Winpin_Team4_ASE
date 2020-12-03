@@ -51,7 +51,7 @@ To deploy app on IBM's Cloud Foundry you need to configure `ibmcloud` locally fi
 
 ## System Architecture
 ### ER Diagram
-![ER Diagrams](./ER%Diagram.PNG "Database ER Diagram") 
+![ER Diagram](./ER%Diagram.PNG "Database ER Diagram") 
 
 ## Doc Resources
 Following are the documents related to Winpin project.
