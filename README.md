@@ -4,6 +4,9 @@
 The goal of this project is to design an Event Management portal “Winpin”, that allows users to participate in events and create engaging virtual events. 
 The event portal will allow users to keep track of the different events, the schedule, the organizers, and the overview of the events.
 
+### Demo/Screenshots
+[Click Here](https://divyu135.github.io/Winpin_Team4_ASE/)
+
 ### Prerequisites
  - Node.js v12+
  - NPM v6+
