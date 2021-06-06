@@ -49,3 +49,6 @@ Deployment of the React app to IBM Cloud
 - `ibmcloud cf push winpin`
 
 To deploy app on IBM's Cloud Foundry you need to configure `ibmcloud` locally first! 
+
+
+Note: For original app from twilio see [twilio-react-app](https://github.com/twilio/twilio-video-app-react)
